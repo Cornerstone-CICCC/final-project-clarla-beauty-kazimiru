@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "sass": "^1.102.0"
+  },
+  "name": "final-project-clarla-beauty-kazimiru",
+  "description": "**Objective:**",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.1.9",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.5",
+    "readdirp": "^5.0.0",
+    "source-map-js": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "npx sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cornerstone-CICCC/final-project-clarla-beauty-kazimiru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cornerstone-CICCC/final-project-clarla-beauty-kazimiru/issues"
+  },
+  "homepage": "https://github.com/Cornerstone-CICCC/final-project-clarla-beauty-kazimiru#readme"
+}
