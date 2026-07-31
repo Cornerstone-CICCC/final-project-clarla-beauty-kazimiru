@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+
+// Body
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -16,4 +19,11 @@ h2 {
   font-size: 4rem;
   font-family: 'Baskervville', sans-serif;
   text-transform: uppercase;
+}
+
+// Navigation
+nav {
+  font-family: 'Baskervville', sans-serif;
+  font-size: $font-size-400;
+  color: $color-text-dark-brown;
 }
