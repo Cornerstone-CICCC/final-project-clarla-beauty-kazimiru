@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="home">
     <header class="header">
       <nav class="header__nav" aria-label="Header navigation">
         <a href="/" class="header__menu">
@@ -204,29 +204,55 @@
         <form action=""></form>
       </section>
 
-      <footer>
-        <img
-          src="assets/logos/carla-beauty-combination.svg"
-          alt="Carla Beauty"
-        />
-        <p>Expert makeup and hairstyle studio</p>
-        <div>
-          <img src="assets/icons/phone.svg" alt="Phone" />
-          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
-          <img src="assets/icons/instagram.svg" alt="Instagram" />
+      <footer class="footer">
+        <div class="footer__inner">
+          <a href="../index.html" class="footer__logo">
+            <img
+              src="../assets/logos/carla-beauty-combination.svg"
+              alt="Carla Beauty"
+            />
+          </a>
+
+          <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
+
+          <div class="footer__socials">
+            <a href="#" aria-label="Call Carla Beauty">
+              <img src="../assets/icons/phone.svg" alt="" />
+            </a>
+
+            <a href="#" aria-label="Contact Carla Beauty on WhatsApp">
+              <img src="../assets/icons/whatsapp.svg" alt="" />
+            </a>
+
+            <a href="#" aria-label="Visit Carla Beauty on Instagram">
+              <img src="../assets/icons/instagram.svg" alt="" />
+            </a>
+          </div>
+
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+
+              <li><a href="my-work.html">My Work</a></li>
+
+              <li><a href="services.html">Services</a></li>
+
+              <li>
+                <a href="classes.html" class="is-active" aria-current="page">
+                  Classes
+                </a>
+              </li>
+
+              <li><a href="beauty-tips.html">Beauty Tips</a></li>
+
+              <li><a href="about.html">About</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <p class="footer__copyright">Copyright 2024, Carla Beauty</p>
         </div>
-        <nav aria-label="Footer navigation">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">My work</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">Beauty Tips</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <p>Copyright 2024 Carla Beauty</p>
       </footer>
     </main>
 
