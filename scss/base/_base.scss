@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as *;
+
+main {
+  padding-top: $header-height-mobile;
+  @media screen and (min-width: $breakpoints-lg) {
+    padding-top: $header-height-desktop;
+  }
+}

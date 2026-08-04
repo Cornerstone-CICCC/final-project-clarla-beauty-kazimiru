@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+
+// Body
+body {
+  font-family: $font-family-inter;
+  line-height: 1.6;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: $font-family-baskerville;
+  text-transform: uppercase;
+}
+
+// Navigation
+nav {
+  font-family: $font-family-baskerville;
+  font-size: $font-size-400;
+  color: $color-text-dark-brown;
+}
+
+// Hero
+.hero {
+  color: white;
+}
+
+.button {
+  font-family: $font-family-baskerville;
+  text-transform: capitalize;
+}
