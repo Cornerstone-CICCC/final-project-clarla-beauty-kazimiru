@@ -1,8 +1,14 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+  background-color: $color-bg-primary;
+}
 
 main {
   padding-top: $header-height-mobile;
-  @media screen and (min-width: $breakpoints-lg) {
+
+  @include media-query {
     padding-top: $header-height-desktop;
   }
 }
