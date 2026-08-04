@@ -1,0 +1,110 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+  padding: $spacing-500 $spacing-200 $spacing-300;
+  background-color: $color-bg-primary;
+  color: $color-text-dark-brown;
+
+  &__inner {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__logo {
+    display: inline-block;
+
+    img {
+      width: 130px;
+      margin-inline: auto;
+    }
+  }
+
+  &__description {
+    margin-top: $spacing-100;
+    font-size: $font-size-100;
+  }
+
+  &__socials {
+    @include flex-center;
+
+    gap: $spacing-300;
+    margin-top: $spacing-200;
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+
+  &__nav {
+    margin-top: $spacing-300;
+    padding-block: $spacing-300;
+
+    border-top: 1px solid rgba($color-text-dark-brown, 0.5);
+    border-bottom: 1px solid rgba($color-text-dark-brown, 0.5);
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $spacing-300;
+      row-gap: $spacing-100;
+
+      text-align: left;
+    }
+
+    a {
+      display: inline-block;
+      font-size: $font-size-300;
+    }
+
+    .is-active {
+      text-decoration: underline;
+    }
+  }
+
+  &__copyright {
+    margin-top: $spacing-300;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: $breakpoints-lg) {
+  .footer {
+    padding: $spacing-500 $spacing-400 $spacing-300;
+
+    &__logo {
+      img {
+        width: 120px;
+      }
+    }
+
+    &__nav {
+      margin-top: $spacing-500;
+      padding-block: $spacing-200;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        text-align: center;
+      }
+
+      a {
+        font-size: $font-size-200;
+      }
+    }
+
+    &__copyright {
+      margin-top: $spacing-200;
+    }
+  }
+}
