@@ -8,8 +8,8 @@
   transform: translateY(0);
   transition: all 0.3s ease-out;
 
-  border: 0.8px solid $color-text-dark-brown;
-  box-shadow: 0 0.9px 0 $color-text-dark-brown;
+  border: 0.8px solid $color-text-darkest-brown;
+  color: $color-text-darkest-brown;
 }
 
 .button:hover {
@@ -25,7 +25,7 @@
 // Common button - white
 .button-white {
   border: 0.8px solid $color-bg-primary;
-  box-shadow: 0 0.9px 0 $color-bg-primary;
+  color: $color-bg-primary;
 }
 .button-white:hover {
   background-color: $color-bg-primary;
