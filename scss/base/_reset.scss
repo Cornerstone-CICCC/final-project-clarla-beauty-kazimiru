@@ -36,6 +36,10 @@ textarea,
 select {
   font: inherit;
 }
+button {
+  all: unset;
+  cursor: pointer;
+}
 
 // Links
 a {

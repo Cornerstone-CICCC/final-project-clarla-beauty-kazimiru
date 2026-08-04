@@ -2,7 +2,7 @@
 
 // Body
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: $font-family-inter;
   line-height: 1.6;
 }
 
@@ -17,13 +17,23 @@ h4 {
 
 h2 {
   font-size: 4rem;
-  font-family: 'Baskervville', sans-serif;
+  font-family: $font-family-baskerville;
   text-transform: uppercase;
 }
 
 // Navigation
 nav {
-  font-family: 'Baskervville', sans-serif;
+  font-family: $font-family-baskerville;
   font-size: $font-size-400;
   color: $color-text-dark-brown;
+}
+
+// Hero
+.hero {
+  color: white;
+}
+
+.button {
+  font-family: $font-family-baskerville;
+  text-transform: capitalize;
 }

@@ -41,25 +41,24 @@
             <img src="assets/icons/instagram.svg" alt="" />
           </a>
         </div>
-
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <img src="assets/images/hero-background.png" alt="" />
         <h1>
           <img
             src="assets/logos/carla-beauty-wordmark-white.svg"
             alt="Carla Beauty Signature Logo"
           />
         </h1>
-        <p>Vancouver's go-to makeup and hairstyle, with a Brazilian twist</p>
+        <p class="hero__description">
+          Vancouver's go-to makeup and hairstyle, with a Brazilian twist
+        </p>
+
         <a href="#form" class="button button-white">Free Consultation</a>
-        <a href="#form">
-          <img src="assets/icons/messages.svg" alt="message" />
-        </a>
       </section>
+
       <section class="about">
         <h2>Professional Makeup & Hairstyle Artist</h2>
         <p>
@@ -213,7 +212,7 @@
         <p>Expert makeup and hairstyle studio</p>
         <div>
           <img src="assets/icons/phone.svg" alt="Phone" />
-          <img src="assets/icons/whatsapp.svg" alt="What's App" />
+          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
           <img src="assets/icons/instagram.svg" alt="Instagram" />
         </div>
         <nav aria-label="Footer navigation">
@@ -230,5 +229,26 @@
         <p>Copyright 2024 Carla Beauty</p>
       </footer>
     </main>
+
+    <div class="contact">
+      <div class="contact__links">
+        <a href="#" class="contact__link contact__link--instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="#" class="contact__link contact__link--phone">
+          <img src="assets/icons/phone.svg" alt="Call" />
+        </a>
+        <a href="#" class="contact__link contact__link--whatsapp">
+          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
+        </a>
+      </div>
+
+      <button class="contact__button" id="contactButton">
+        <img src="assets/icons/contact.svg" alt="Contact" />
+      </button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
