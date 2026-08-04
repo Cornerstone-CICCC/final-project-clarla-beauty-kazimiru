@@ -1,12 +1,28 @@
 const contactButton = document.querySelector('#contactButton');
-const contactImg = contactButton.querySelector('img');
-const contact = document.querySelector('.contact');
-contactButton.addEventListener('click', () => {
-  contact.classList.toggle('is-open');
 
-  if (contact.classList.contains('is-open')) {
-    contactImg.src = 'assets/icons/cross-outline.svg';
-  } else {
-    contactImg.src = 'assets/icons/contact.svg';
-  }
-});
+if (contactButton) {
+  const contact = document.querySelector('.contact');
+  const contactImg = contactButton.querySelector('img');
+
+  const currentIconPath = contactImg.getAttribute('src');
+  const iconFolder = currentIconPath.slice(
+    0,
+    currentIconPath.lastIndexOf('/') + 1,
+  );
+
+  contactButton.addEventListener('click', () => {
+    contact.classList.toggle('is-open');
+
+    const isOpen = contact.classList.contains('is-open');
+
+    contactButton.setAttribute('aria-expanded', String(isOpen));
+    contactButton.setAttribute(
+      'aria-label',
+      isOpen ? 'Close contact options' : 'Open contact options',
+    );
+
+    contactImg.src = isOpen
+      ? `${iconFolder}cross-outline.svg`
+      : `${iconFolder}contact.svg`;
+  });
+}
