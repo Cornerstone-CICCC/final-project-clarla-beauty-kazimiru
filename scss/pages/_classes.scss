@@ -1,0 +1,290 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.class-page {
+  color: $color-text-primary;
+  background-color: $color-bg-primary;
+
+  h1,
+  h2,
+  h3 {
+    text-transform: none;
+  }
+
+  &__intro {
+    padding: $spacing-200 $spacing-300 $spacing-400;
+    background-color: $color-bg-primary;
+  }
+
+  &__intro-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+
+  &__back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-100;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: $font-size-300;
+
+    img {
+      width: 14px;
+      height: 14px;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin-top: $spacing-300;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: $font-size-500;
+    line-height: $line-height-tight;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.class-detail {
+  background-color: $color-bg-accent-light;
+
+  &__inner {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__content {
+    padding: $spacing-400 $spacing-200 $spacing-500;
+    background-color: $color-bg-accent-light;
+  }
+
+  &__section {
+    & + & {
+      margin-top: $spacing-500;
+    }
+
+    h2 {
+      margin-bottom: $spacing-200;
+
+      color: $color-text-red-brown;
+      font-family: $font-family-baskerville;
+      font-size: $font-size-500;
+      line-height: $line-height-tight;
+      font-weight: $font-weight-regular;
+    }
+
+    p {
+      color: $color-text-primary;
+      font-size: $font-size-100;
+      line-height: 1.7;
+    }
+  }
+
+  &__topic {
+    & + & {
+      margin-top: $spacing-500;
+    }
+
+    h3 {
+      margin-bottom: $spacing-100;
+
+      color: $color-text-primary;
+      font-family: $font-family-baskerville;
+      font-size: $font-size-450;
+      line-height: $line-height-tight;
+      font-weight: $font-weight-regular;
+    }
+
+    ul {
+      padding-left: $spacing-300;
+      list-style: disc;
+    }
+
+    li {
+      padding-left: 2px;
+      font-size: $font-size-100;
+      line-height: 1.65;
+    }
+  }
+
+  &__mobile-button {
+    display: block;
+    width: 100%;
+    margin-top: $spacing-500;
+
+    text-align: center;
+    font-size: $font-size-300;
+  }
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    order: 1;
+
+    padding: $spacing-300;
+    background-color: $color-bg-primary;
+  }
+
+  &__image {
+    order: 2;
+
+    width: 100%;
+    min-height: 390px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &__title {
+    display: none;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: $font-size-500;
+    line-height: $line-height-tight;
+    font-weight: $font-weight-regular;
+  }
+
+  &__information {
+    display: grid;
+    gap: $spacing-200;
+  }
+
+  &__information-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-100;
+
+    color: $color-text-primary;
+    font-size: $font-size-200;
+
+    img {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    margin-top: $spacing-400;
+
+    text-align: center;
+    font-size: $font-size-300;
+  }
+}
+
+@media screen and (min-width: $breakpoints-lg) {
+  .class-page {
+    &__intro {
+      padding: $spacing-200 $spacing-400 $spacing-300;
+    }
+
+    &__back-link {
+      font-size: $font-size-200;
+    }
+
+    &__title {
+      margin-top: $spacing-200;
+
+      text-align: center;
+      font-size: 4rem;
+    }
+  }
+
+  .class-detail {
+    &__inner {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: $spacing-600;
+
+      max-width: 1020px;
+      padding: $spacing-600 0 $spacing-700;
+    }
+
+    &__content {
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__section {
+      & + & {
+        margin-top: $spacing-500;
+      }
+
+      h2 {
+        font-size: $font-size-500;
+      }
+
+      p {
+        font-size: $font-size-100;
+      }
+    }
+
+    &__topic {
+      & + & {
+        margin-top: $spacing-400;
+      }
+
+      h3 {
+        font-size: $font-size-400;
+      }
+    }
+
+    &__mobile-button {
+      display: none;
+    }
+  }
+
+  .class-card {
+    align-self: start;
+
+    border: 1px solid $color-text-dark-pink;
+
+    &__image {
+      order: 1;
+
+      min-height: 0;
+      aspect-ratio: 0.78;
+    }
+
+    &__body {
+      order: 2;
+
+      padding: $spacing-300;
+      background-color: transparent;
+    }
+
+    &__title {
+      display: block;
+      margin-bottom: $spacing-300;
+      font-size: $font-size-450;
+    }
+
+    &__information {
+      gap: $spacing-150;
+    }
+
+    &__information-item {
+      font-size: $font-size-100;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &__button {
+      margin-top: $spacing-400;
+      font-size: $font-size-200;
+    }
+  }
+}
