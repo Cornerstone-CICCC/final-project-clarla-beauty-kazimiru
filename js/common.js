@@ -1,13 +1,13 @@
 const contactButton = document.querySelector('#contactButton');
 
 if (contactButton) {
-  const contact = document.querySelector('.contact');
+  const contact = document.querySelector('.floating-contact');
   const contactImg = contactButton.querySelector('img');
 
   const currentIconPath = contactImg.getAttribute('src');
   const iconFolder = currentIconPath.slice(
     0,
-    currentIconPath.lastIndexOf('/') + 1,
+    currentIconPath.lastIndexOf('/') + 1
   );
 
   contactButton.addEventListener('click', () => {
@@ -18,7 +18,7 @@ if (contactButton) {
     contactButton.setAttribute('aria-expanded', String(isOpen));
     contactButton.setAttribute(
       'aria-label',
-      isOpen ? 'Close contact options' : 'Open contact options',
+      isOpen ? 'Close contact options' : 'Open contact options'
     );
 
     contactImg.src = isOpen
