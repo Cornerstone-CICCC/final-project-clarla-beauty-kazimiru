@@ -14,10 +14,10 @@
         </a>
 
         <div class="header__nav--left">
-          <a href="#" class="header__link is-active">Home</a>
-          <a href="#" class="header__link">My work</a>
-          <a href="#" class="header__link">Services</a>
-          <a href="#" class="header__link">Classes</a>
+          <a href="/" class="header__link is-active">Home</a>
+          <a href="pages/my-work.html" class="header__link">My work</a>
+          <a href="pages/services.html" class="header__link">Services</a>
+          <a href="pages/classes.html" class="header__link">Classes</a>
         </div>
 
         <a href="/" class="header__logo">
@@ -28,10 +28,15 @@
         </a>
 
         <div class="header__nav--right">
-          <a href="#" class="header__link">Beauty Tips</a>
-          <a href="#" class="header__link">About</a>
-          <a href="#" class="header__link">Contact</a>
-          <a href="#" class="header__social">
+          <a href="pages/beauty-tips.html" class="header__link">Beauty Tips</a>
+          <a href="pages/about.html" class="header__link">About</a>
+          <a href="pages/contact.html" class="header__link">Contact</a>
+          <a
+            href="https://www.instagram.com/carlabeatrizs_"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="header__social"
+          >
             <img src="assets/icons/instagram.svg" alt="" />
           </a>
         </div>
@@ -43,7 +48,7 @@
         <h1>
           <img
             src="assets/logos/carla-beauty-wordmark-white.svg"
-            alt="Carla Beauty Signature Logo"
+            alt="Carla Beauty"
           />
         </h1>
         <p class="hero__description">
@@ -54,124 +59,184 @@
       </section>
 
       <section class="about">
-        <h2>Professional Makeup & Hairstyle Artist</h2>
-        <p>
+        <h2 class="about__title">Professional Makeup & Hairstyle Artist</h2>
+
+        <p class="about__description">
           10+ years creating stunning looks for weddings and special occasions.
         </p>
-        <a href="pages/about.html" class="button">About me</a>
+
         <img
+          class="about__signature"
           src="assets/logos/carla-beatriz-signature-black.svg"
           alt="A signature of Carla Beatriz"
         />
+        <a href="pages/about.html" class="button">About me</a>
 
-        <div>
-          <img
-            src="assets/images/founder-portrait.png"
-            alt="A portrait of the founder"
-          />
-          <img src="assets/icons/instagram-white.svg" alt="Instagram" />
-          <div>
-            <img src="assets/logos/logo-loreal.svg" alt="L'Oréal logo" />
-            <p>Official Certified Professional</p>
-          </div>
+        <div class="about__founder">
+          <a
+            href="https://www.instagram.com/carlabeatrizs_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="about__instagram"
+          >
+            <img
+              src="assets/images/founder-portrait.png"
+              alt="A portrait of the founder"
+            />
+          </a>
         </div>
 
-        <p>Our brands</p>
-        <div>
-          <img src="assets/logos/logo-mac.svg" alt="TODO" />
-          <img src="assets/logos/logo-lancome.svg" alt="TODO" />
-          <img src="assets/logos/logo-inglot.svg" alt="TODO" />
-          <img src="assets/logos/logo-laura-mercier.svg" alt="TODO" />
-          <img src="assets/logos/logo-charlotte-tilbury.svg" alt="TODO" />
-          <img src="assets/logos/logo-tarte.svg" alt="TODO" />
-          <img src="assets/logos/logo-anastasia.svg" alt="TODO" />
-          <img src="assets/logos/logo-kryolan.svg" alt="TODO" />
+        <div class="about__brands">
+          <h3 class="about__brands-title">Our brands</h3>
+          <ul class="about__brands-list">
+            <li><img src="assets/logos/brand1.png" alt="MAC" /></li>
+            <li><img src="assets/logos/brand2.png" alt="Lancôme" /></li>
+            <li><img src="assets/logos/brand3.png" alt="INGLOT" /></li>
+            <li>
+              <img src="assets/logos/brand4.png" alt="Laura Mercier" />
+            </li>
+            <li>
+              <img src="assets/logos/brand5.png" alt="Charlotte Tilbury" />
+            </li>
+            <li><img src="assets/logos/brand6.png" alt="Tarte" /></li>
+            <li>
+              <img
+                src="assets/logos/brand7.png"
+                alt="Anastasia Beverly Hills"
+              />
+            </li>
+            <li><img src="assets/logos/brand8.png" alt="Kryolan" /></li>
+          </ul>
         </div>
       </section>
+
       <section class="my-work">
         <h2 class="my-work__title">You are a star</h2>
-        <p class="my-work__discription">
+        <p class="my-work__description">
           Shine effortlessly, embrace your unique features with absolute
           confidence.
         </p>
         <a href="pages/my-work.html" class="button">My work</a>
-        <img src="assets/images/client-1.png" alt="Photo of a client" />
-        <img src="assets/images/client-2.png" alt="Photo of a client" />
-        <img src="assets/images/client-3.png" alt="Photo of a client" />
-        <img src="assets/images/client-4.png" alt="Photo of a client" />
 
-        <img src="assets/icons/apostrophe.svg" alt="TODO" />
+        <div class="my-work__gallery">
+          <img src="assets/images/client-1.png" alt="Photo of a client" />
+          <img src="assets/images/client-2.png" alt="Photo of a client" />
+          <img src="assets/images/client-3.png" alt="Photo of a client" />
+          <img src="assets/images/client-4.png" alt="Photo of a client" />
+        </div>
 
-        <p>
-          Carla is the best! She made me the night's brightest star! She stayed
-          with me the whole wedding ensuring I always looked and felt
-          wonderful!!
-        </p>
+        <blockquote class="my-work__client-review">
+          <img src="assets/icons/apostrophe.svg" alt="" />
+          <p>
+            Carla is the best! She made me the night's brightest star! She
+            stayed with me the whole wedding ensuring I always looked and felt
+            wonderful!!
+          </p>
+        </blockquote>
 
-        <a href="">
-          <img src="assets/icons/arrow-left.svg" alt="Arrow towards left" />
-        </a>
-        <img src="assets/images/singniture-janny.svg" alt="Janny" />
-        <a href="">
-          <img src="assets/icons/arrow-right.svg" alt="Arrow toward right" />
-        </a>
+        <div class="my-work__review-navigation">
+          <button id="previousReview" aria-label="Previous review">
+            <img src="assets/icons/arrow-left.svg" alt="" />
+          </button>
+
+          <img src="assets/images/signature-janny.svg" alt="Janny" />
+
+          <button id="nextReview" aria-label="Next review">
+            <img src="assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
       </section>
 
-      <section class="styles">
-        <h2 class="styles__title">Makeup & hairstyle</h2>
-        <p class="styles__discription">
+      <section class="services">
+        <h2 class="services__title">Makeup & hairstyle</h2>
+        <p class="services__description">
           We offer fully customizable plan to meet your unique requirements.
         </p>
         <a href="#form" class="button">Get a quote</a>
-        <div>
-          <img src="assets/images/service-wedding.png" alt="TODO" />
-          <img src="assets/images/service-party.png" alt="TODO" />
-          <img src="assets/images/service-photoshoot.png" alt="TODO" />
-        </div>
+        <ul class="services__list">
+          <li>
+            <div class="services__image-wrapper">
+              <img
+                src="assets/images/service-wedding.png"
+                alt="Wedding makeup"
+              />
+            </div>
+            <span>Wedding</span>
+          </li>
+          <li>
+            <div class="services__image-wrapper">
+              <img src="assets/images/service-party.png" alt="Party makeup" />
+            </div>
+            <span>Party</span>
+          </li>
+          <li>
+            <div class="services__image-wrapper">
+              <img
+                src="assets/images/service-photoshoot.png"
+                alt="Photoshoot makeup"
+              />
+            </div>
+            <span>Photoshoot</span>
+          </li>
+        </ul>
       </section>
 
       <section class="classes">
-        <h2 class="classes__title">Make up 101</h2>
-        <div class="classes__description">
-          <h3>1-on-1 Master Class</h3>
-          <p>
-            Customize your learning experience to excel in your chosen areas,
-            all at your own pace.
-          </p>
-          <!-- TODO -->
-          <a href="pages/classes.html#1">
-            <span>View class</span>
-            <img src="assets/icons/arrow-right.svg" alt="Arrow towards right" />
-          </a>
-
-          <h3>Professional 1-day Makeup workshop</h3>
-          <p>Discover popular and practical techniques to apply right away!</p>
-          <a href="pages/classes.html#2">
-            <span>View class</span>
-            <img src="assets/icons/arrow-right.svg" alt="Arrow towards right" />
-          </a>
-
-          <h3>Self-Makeup Beginner class</h3>
-          <p>
-            Learn the basics, practice doing your own makeup and make
-            new friends in the process!
-          </p>
-          <a href="pages/classes.html#3">
-            <span>View class</span>
-            <img src="assets/icons/arrow-right.svg" alt="Arrow towards right" />
-          </a>
-
+        <div class="classes__inner">
+          <h2 class="classes__title">Make up 101</h2>
+          <ul class="classes__list">
+            <li class="classes__item">
+              <h3 class="classes__item-title">1-on-1 Master Class</h3>
+              <p class="classes__item-description">
+                Customize your learning experience to excel in your chosen
+                areas, all at your own pace.
+              </p>
+              <!-- TODO -->
+              <a href="pages/classes.html#1" class="classes__item-link">
+                <span>View class</span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="classes__item">
+              <h3 class="classes__item-title">
+                Professional 1-day Makeup workshop
+              </h3>
+              <p class="classes__item-description">
+                Discover popular and practical techniques to apply right away!
+              </p>
+              <a href="pages/classes.html#2" class="classes__item-link">
+                <span>View class</span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="classes__item">
+              <h3 class="classes__item-title">Self-Makeup Beginner class</h3>
+              <p class="classes__item-description">
+                Learn the basics, practice doing your own makeup and make
+                new friends in the process!
+              </p>
+              <a href="pages/classes.html#3" class="classes__item-link">
+                <span>View class</span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+          </ul>
           <a href="pages/classes.html" class="button">All classes</a>
         </div>
-        <img
-          src="assets/images/class-portrait.png"
-          alt="Portrait of the instructor"
-        />
+
+        <div class="classes__portrait-wrapper">
+          <img
+            class="classes__portrait"
+            src="assets/images/class-portrait.png"
+            alt="Portrait of the instructor"
+          />
+        </div>
       </section>
 
       <section class="beauty-tips">
         <h2 class="beauty-tips__title">DIY beauty corner</h2>
-        <div>
+        <div class="beauty-tips__gallery">
           <img
             src="assets/images/beauty-tips-1.png"
             alt="Dummy image of instagram reel thumbnail"
@@ -188,14 +253,13 @@
         <a href="pages/beauty-tips.html" class="button">More beauty tips</a>
       </section>
 
-      <section class="form">
+      <section class="contact">
         <h2>Let's talk</h2>
         <p>
           Check availability, pricing, and schedule a meeting for your special
           day or our academy services.
         </p>
 
-        <form action=""></form>
       </section>
 
       <footer class="footer">
@@ -210,15 +274,30 @@
           <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
 
           <div class="footer__socials">
-            <a href="#" aria-label="Call Carla Beauty">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Call Carla Beauty"
+            >
               <img src="../assets/icons/phone.svg" alt="" />
             </a>
 
-            <a href="#" aria-label="Contact Carla Beauty on WhatsApp">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact Carla Beauty on WhatsApp"
+            >
               <img src="../assets/icons/whatsapp.svg" alt="" />
             </a>
 
-            <a href="#" aria-label="Visit Carla Beauty on Instagram">
+            <a
+              href="https://www.instagram.com/carlabeatrizs_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Carla Beauty on Instagram"
+            >
               <img src="../assets/icons/instagram.svg" alt="" />
             </a>
           </div>
@@ -248,15 +327,30 @@
       </footer>
     </main>
 
-    <div class="contact">
+    <div class="contact__container">
       <div class="contact__links">
-        <a href="#" class="contact__link contact__link--instagram">
+        <a
+          href="https://www.instagram.com/carlabeatrizs_"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact__link contact__link--instagram"
+        >
           <img src="assets/icons/instagram.svg" alt="Instagram" />
         </a>
-        <a href="#" class="contact__link contact__link--phone">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact__link contact__link--phone"
+        >
           <img src="assets/icons/phone.svg" alt="Call" />
         </a>
-        <a href="#" class="contact__link contact__link--whatsapp">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact__link contact__link--whatsapp"
+        >
           <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
         </a>
       </div>
