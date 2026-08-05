@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 .footer {
-  padding: $spacing-500 $spacing-200 $spacing-300;
+  padding: $spacing-500 $spacing-200 $spacing-400;
   background-color: $color-bg-primary;
   color: $color-text-dark-brown;
 
@@ -17,7 +17,7 @@
     display: inline-block;
 
     img {
-      width: 130px;
+      width: 126px;
       margin-inline: auto;
     }
   }
@@ -25,6 +25,7 @@
   &__description {
     margin-top: $spacing-100;
     font-size: $font-size-100;
+    font-weight: $font-weight-light;
   }
 
   &__socials {
@@ -38,8 +39,8 @@
     }
 
     img {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       object-fit: contain;
     }
   }
@@ -53,16 +54,22 @@
 
     ul {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+      grid-auto-flow: column;
       column-gap: $spacing-300;
       row-gap: $spacing-100;
 
       text-align: left;
     }
 
+    li {
+      text-align: center;
+    }
+
     a {
       display: inline-block;
-      font-size: $font-size-300;
+      font-size: $font-size-400;
+      color: $color-text-red-brown;
     }
 
     .is-active {
@@ -72,25 +79,22 @@
 
   &__copyright {
     margin-top: $spacing-300;
-    font-size: 0.75rem;
+    font-size: $font-size-100;
+    color: $color-text-red-brown;
   }
 }
 
-@media screen and (min-width: $breakpoints-lg) {
+@include media-query {
   .footer {
-    padding: $spacing-500 $spacing-400 $spacing-300;
-
-    &__logo {
-      img {
-        width: 120px;
-      }
-    }
+    padding: $spacing-700 $spacing-400 $spacing-400;
 
     &__nav {
-      margin-top: $spacing-500;
+      margin-top: $spacing-400;
       padding-block: $spacing-200;
 
       ul {
+        padding-inline: $spacing-600;
+
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -99,7 +103,7 @@
       }
 
       a {
-        font-size: $font-size-200;
+        font-size: $font-size-400;
       }
     }
 
