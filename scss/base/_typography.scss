@@ -37,6 +37,13 @@ h3 {
   line-height: $line-height-snug;
 }
 
+// Navigation
+nav {
+  font-family: $font-family-baskerville;
+  font-size: $font-size-400;
+  color: $color-text-dark-brown;
+}
+
 // PC style
 @include media-query {
   h1,
