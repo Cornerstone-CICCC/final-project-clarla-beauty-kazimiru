@@ -33,8 +33,13 @@ const currentPath = window.location.pathname;
 
 document.querySelectorAll('.nav__link').forEach((link) => {
   const linkPath = new URL(link.href).pathname;
+  console.log('linkPath:', linkPath, 'currentPath:', currentPath);
 
-  if (linkPath === currentPath) {
+  if (
+    linkPath === currentPath ||
+    (linkPath === '/' && currentPath === '/index.html') ||
+    (linkPath === '/index.html' && currentPath === '/')
+  ) {
     link.classList.add('is-active');
     link.setAttribute('aria-current', 'page');
   }
