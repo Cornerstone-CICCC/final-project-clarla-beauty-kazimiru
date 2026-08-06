@@ -36,5 +36,6 @@ document.querySelectorAll('.nav__link').forEach((link) => {
 
   if (linkPath === currentPath) {
     link.classList.add('is-active');
+    link.setAttribute('aria-current', 'page');
   }
 });
