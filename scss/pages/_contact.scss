@@ -1,0 +1,339 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.contact-page {
+  text-align: center;
+
+  .title {
+    @include flex-col;
+
+    &::after {
+      content: '';
+      width: 200px;
+      height: 1px;
+      background-color: $color-pink;
+      margin-top: $spacing-300;
+    }
+  }
+
+  .description {
+    margin-top: $spacing-300;
+    margin-inline: $spacing-100;
+  }
+
+  .socials {
+    @include flex-center;
+
+    gap: $spacing-300;
+    margin-top: $spacing-200;
+
+    a {
+      @include flex-center;
+      gap: $spacing-100;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    span {
+      font-size: $font-size-300;
+      color: $color-text-red-brown;
+      display: none;
+    }
+  }
+
+  .contact {
+    margin-top: $spacing-400;
+    padding-block: $spacing-400;
+    padding-inline: $spacing-200;
+    background-color: $color-bg-accent-light;
+
+    &__tabs,
+    &__title,
+    &__options {
+      font-family: $font-family-baskerville;
+    }
+
+    &__tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid $color-mid-gray;
+    }
+
+    &__tab {
+      padding-bottom: $spacing-100;
+      color: $color-mid-gray;
+      font-size: $font-size-500;
+
+      &--active {
+        color: $color-text-primary;
+        border-bottom: 1px solid $color-text-primary;
+      }
+    }
+
+    &__form {
+      padding-top: $spacing-500;
+
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-400;
+    }
+
+    fieldset {
+      border: 0;
+    }
+
+    &-form__step {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-200;
+    }
+
+    &__title {
+      margin-bottom: $spacing-200;
+      font-size: $font-size-500;
+    }
+
+    &__options {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-150;
+    }
+
+    &__option {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding-inline: $spacing-200;
+      background-color: $color-bg-accent-white;
+      border: 1px solid transparent;
+      color: $color-text-gray;
+      cursor: pointer;
+
+      &-label {
+        font-size: $font-size-400;
+      }
+
+      &:has(.contact__radio:checked) {
+        border-color: $color-text-dark-pink;
+        color: $color-text-primary;
+
+        position: relative;
+        &::after {
+          content: url('/assets/icons/tick-circle-solid.svg');
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          right: $spacing-200;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &__radio {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-400;
+    }
+
+    &__input,
+    &__select {
+      width: 100%;
+      height: 51px;
+    }
+
+    &__input--date {
+      color: $color-mid-gray;
+      cursor: text;
+
+      &::-webkit-calendar-picker-indicator {
+        opacity: 0.55;
+        cursor: pointer;
+      }
+    }
+
+    &__title--class-date {
+      margin-bottom: $spacing-100;
+    }
+
+    &__hint {
+      display: none;
+      margin-bottom: $spacing-150;
+    }
+
+    &__checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: $spacing-200;
+      margin-top: $spacing-150;
+      font-size: $font-size-200;
+    }
+
+    &__checkbox {
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 1px solid $color-text-dark-pink;
+      background-color: white;
+      cursor: pointer;
+
+      &:checked {
+        position: relative;
+        background-color: $color-pink;
+
+        &::after {
+          content: '✓';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          color: white;
+          font-size: $font-size-200;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    &__contact-options {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-200;
+    }
+
+    &__contact-option {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: $spacing-200;
+      cursor: pointer;
+      font-size: $font-size-300;
+
+      &:has(.contact__radio:checked) {
+        color: $color-text-primary;
+
+        .contact__radio-custom {
+          box-shadow: inset 0 0 0 4px white;
+          background-color: $color-pink;
+        }
+      }
+    }
+
+    &__method-input {
+      display: flex;
+      gap: 0.5rem;
+
+      input {
+        margin-top: $spacing-100;
+      }
+    }
+
+    &__method-input[hidden] {
+      display: none;
+    }
+
+    &__radio-custom {
+      width: 18px;
+      height: 18px;
+      border: 1px solid $color-text-dark-pink;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    &__textarea {
+      width: 100%;
+      min-height: 150px;
+      padding-inline: $spacing-200;
+      padding-block: $spacing-150;
+      resize: none;
+    }
+
+    &__phone-wrapper {
+      display: flex;
+      height: 51px;
+      background-color: $color-bg-accent-white;
+      border: 1px solid transparent;
+      margin-top: $spacing-100;
+
+      &:focus-within {
+        border-color: $color-text-dark-pink;
+      }
+    }
+
+    &__country-code {
+      width: 68px;
+      padding-inline: $spacing-150;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &__phone-input {
+      flex: 1;
+      padding-inline: $spacing-150;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+    }
+
+    &__title--small {
+      font-size: $font-size-450;
+    }
+  }
+
+  @include media-query {
+    .description {
+      width: 437px;
+      margin-inline: auto;
+    }
+
+    .socials {
+      margin-top: $spacing-500;
+
+      span {
+        display: block;
+      }
+    }
+
+    .contact {
+      margin-top: $spacing-500;
+      margin-inline: auto;
+      padding-block: $spacing-500;
+      padding-inline: $spacing-600;
+      width: 800px;
+
+      &__form {
+        text-align: start;
+      }
+
+      &__options {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+      }
+
+      &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      &__hint {
+        display: block;
+      }
+    }
+
+    .button {
+      align-self: center;
+    }
+  }
+}
