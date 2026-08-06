@@ -13,7 +13,7 @@
 
       &::after {
         content: '';
-        width: 58%;
+        width: 200px;
         height: 1px;
         background-color: $color-pink;
         margin-top: $spacing-300;
@@ -387,17 +387,6 @@
 
   // PC style
   @include media-query {
-    // Common
-    .my-work,
-    .services,
-    .beauty-tips {
-      &__title {
-        &::after {
-          width: 20%;
-        }
-      }
-    }
-
     .about {
       margin-inline: auto;
       max-width: 860px;
