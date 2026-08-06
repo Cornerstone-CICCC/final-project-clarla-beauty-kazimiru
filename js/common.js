@@ -1,3 +1,4 @@
+// Toggle the contact options when the contact button is clicked
 const contactButton = document.querySelector('#contactButton');
 
 if (contactButton) {
@@ -26,3 +27,14 @@ if (contactButton) {
       : `${iconFolder}contact.svg`;
   });
 }
+
+// Highlight the active link in the navigation bar
+const currentPath = window.location.pathname;
+
+document.querySelectorAll('.nav__link').forEach((link) => {
+  const linkPath = new URL(link.href).pathname;
+
+  if (linkPath === currentPath) {
+    link.classList.add('is-active');
+  }
+});
