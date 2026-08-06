@@ -33,7 +33,6 @@ const currentPath = window.location.pathname;
 
 document.querySelectorAll('.nav__link').forEach((link) => {
   const linkPath = new URL(link.href).pathname;
-  console.log('linkPath:', linkPath, 'currentPath:', currentPath);
 
   if (
     linkPath === currentPath ||
