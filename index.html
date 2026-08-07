@@ -9,9 +9,15 @@
   <body class="home">
     <header class="header">
       <nav class="header__nav" aria-label="Header navigation">
-        <a href="/" class="header__menu">
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="header-navigation"
+        >
           <img src="/assets/icons/menu.svg" alt="Menu" />
-        </a>
+        </button>
 
         <div class="header__nav--left">
           <a href="/" class="header__link nav__link">Home</a>
@@ -267,12 +273,317 @@
         <a href="pages/beauty-tips.html" class="button">More beauty tips</a>
       </section>
 
-      <section class="contact">
-        <h2>Let's talk</h2>
-        <p>
+      <section class="contact-page">
+        <h2 class="title">Let's talk</h2>
+        <p class="description">
           Check availability, pricing, and schedule a meeting for your special
           day or our academy services.
         </p>
+        <section class="contact" id="form">
+          <div class="contact__tabs">
+            <button
+              class="contact__tab contact__tab--active"
+              type="button"
+              data-form-type="services"
+            >
+              Services
+            </button>
+
+            <button class="contact__tab" type="button" data-form-type="classes">
+              Classes
+            </button>
+          </div>
+
+          <form class="contact__form">
+            <!-- Service -->
+            <fieldset
+              class="contact-form__flow contact-form__flow--services"
+              data-form-type="services"
+            >
+              <!-- Services - Step 1 -->
+              <fieldset class="contact-form__step" data-step="1">
+                <fieldset class="contact__group contact__group--event-type">
+                  <legend class="contact__title">Event Type</legend>
+
+                  <div class="contact__options">
+                    <label class="contact__option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="event-type"
+                        value="wedding"
+                        checked
+                      />
+                      <span class="contact__option-label">Wedding</span>
+                    </label>
+
+                    <label class="contact__option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="event-type"
+                        value="party"
+                      />
+                      <span class="contact__option-label">Party</span>
+                    </label>
+
+                    <label class="contact__option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="event-type"
+                        value="photoshoot"
+                      />
+                      <span class="contact__option-label">Photoshoot</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="contact__row">
+                  <fieldset class="contact__group">
+                    <legend class="contact__title">Event Date</legend>
+
+                    <div class="contact__input-wrapper">
+                      <input
+                        class="contact__input contact__input--date"
+                        type="date"
+                        name="event-date"
+                        aria-label="Event date"
+                      />
+                    </div>
+
+                    <label class="contact__checkbox-label">
+                      <input
+                        class="contact__checkbox"
+                        type="checkbox"
+                        name="event-date-undecided"
+                      />
+                      <span>Not decided</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="contact__group">
+                    <legend class="contact__title">Event Time</legend>
+
+                    <div class="contact__select-wrapper">
+                      <select class="contact__select" name="event-time">
+                        <option value="full-day">Full day</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                      </select>
+                    </div>
+
+                    <label class="contact__checkbox-label">
+                      <input
+                        class="contact__checkbox"
+                        type="checkbox"
+                        name="time-undecided"
+                      />
+                      <span>Not decided</span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <fieldset class="contact__group contact__group--name">
+                  <legend class="contact__title">Name</legend>
+
+                  <input
+                    class="contact__input"
+                    id="name-service"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                  />
+                </fieldset>
+
+                <fieldset class="contact__group contact__group--contact">
+                  <legend class="contact__title">Contact</legend>
+
+                  <div class="contact__contact-options">
+                    <!-- Call -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="call"
+                          checked
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>Call</span>
+                      </label>
+
+                      <div class="contact__method-input contact__phone-wrapper">
+                        <select
+                          class="contact__country-code"
+                          name="call-country-code"
+                          aria-label="Call country code"
+                          disabled
+                        >
+                          <option value="+1">+1</option>
+                          <option value="+81">+81</option>
+                        </select>
+
+                        <input
+                          class="contact__phone-input"
+                          type="tel"
+                          name="call-phone"
+                          placeholder="Your mobile number"
+                          autocomplete="tel"
+                          disabled
+                        />
+                      </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="whatsapp"
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>WhatsApp</span>
+                      </label>
+
+                      <div class="contact__method-input contact__phone-wrapper">
+                        <select
+                          class="contact__country-code"
+                          name="whatsapp-country-code"
+                          aria-label="WhatsApp country code"
+                          disabled
+                        >
+                          <option value="+1">+1</option>
+                          <option value="+81">+81</option>
+                        </select>
+
+                        <input
+                          class="contact__phone-input"
+                          type="tel"
+                          name="whatsapp-phone"
+                          placeholder="Your mobile number"
+                          autocomplete="tel"
+                          disabled
+                        />
+                      </div>
+                    </div>
+
+                    <!-- SMS -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="sms"
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>SMS</span>
+                      </label>
+
+                      <div class="contact__method-input">
+                        <input
+                          class="contact__input"
+                          type="text"
+                          name="sms-account"
+                          placeholder="Your SMS account"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="email"
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>Email</span>
+                      </label>
+
+                      <div class="contact__method-input">
+                        <input
+                          class="contact__input"
+                          type="email"
+                          name="email"
+                          placeholder="Your email address"
+                          autocomplete="email"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="contact__group contact__group--contact-time">
+                  <legend class="contact__title contact__title--small">
+                    When do you want us to call?
+                  </legend>
+
+                  <div class="contact__contact-options">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="I don't mind"
+                        checked
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>I don't mind</span>
+                    </label>
+
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="Morning"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Morning</span>
+                    </label>
+
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="Afternoon"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Afternoon</span>
+                    </label>
+
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="Evening"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Evening</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <button class="button" type="submit">Next</button>
+              </fieldset>
+            </fieldset>
+          </form>
+        </section>
       </section>
     </main>
 
@@ -288,12 +599,7 @@
         <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
 
         <div class="footer__socials">
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Call Carla Beauty"
-          >
+          <a href="tel:+10000000000" aria-label="Call Carla Beauty">
             <img src="/assets/icons/phone.svg" alt="" />
           </a>
 
@@ -387,5 +693,6 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/common.js"></script>
+    <script src="/js/home.js"></script>
   </body>
 </html>

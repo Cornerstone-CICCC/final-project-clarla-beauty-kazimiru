@@ -9,12 +9,18 @@
   <body class="contact-page">
     <header class="header">
       <nav class="header__nav" aria-label="Header navigation">
-        <a href="/" class="header__menu">
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="header-navigation"
+        >
           <img src="/assets/icons/menu.svg" alt="Menu" />
-        </a>
+        </button>
 
         <div class="header__nav--left">
-          <a href="/" class="header__link">Home</a>
+          <a href="/" class="header__link nav__link">Home</a>
           <a href="/pages/my-work.html" class="header__link nav__link">
             My work
           </a>
@@ -710,7 +716,7 @@
                 <div class="contact__quote__details">
                   <div class="contact__quote__category">
                     <h4>Basic services</h4>
-                    <ul class="contact__quote__item">
+                    <ul class="contact__quote__item ">
                       <li>Exclusive room</li>
                       <li>Hairstyle</li>
                       <li>Hairstyle trial</li>
@@ -727,7 +733,7 @@
                   <div class="contact__quote__additional-service">
                     <div class="contact__quote__category">
                       <h4>Premium services</h4>
-                      <ul class="contact__quote__item">
+                      <ul class="contact__quote__item contact__quote__item-premium">
                         <li>Coming soon</li>
                       </ul>
                     </div>
@@ -1111,7 +1117,7 @@
         <nav class="footer__nav" aria-label="Footer navigation">
           <ul>
             <li>
-              <a href="/index.html" class="nav__link">Home</a>
+              <a href="/" class="nav__link">Home</a>
             </li>
 
             <li>

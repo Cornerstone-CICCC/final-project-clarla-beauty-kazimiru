@@ -11,7 +11,6 @@ const showFormType = (formType) => {
     const isActive = flow.dataset.formType === formType;
 
     flow.hidden = !isActive;
-    flow.disabled = !isActive;
   });
 
   tabs.forEach((tab) => {
@@ -82,11 +81,103 @@ const updateContactMethod = () => {
 /**
  * Initializes the contact form for the specified form type.
  * @param {string} formType - The type of form to initialize.
+ * @param {number} stepNumber - The initial step number.
  */
-const initializeForm = (formType) => {
+const initializeForm = (formType, stepNumber = 1) => {
   resetContactForm();
   showFormType(formType);
-  showStep(formType, 1);
+  showStep(formType, stepNumber);
+};
+
+/**
+ * Restores data passed from the home page.
+ */
+const restoreHomeFormData = () => {
+  const savedData = sessionStorage.getItem('contactFormData');
+
+  if (!savedData) {
+    return;
+  }
+
+  const data = JSON.parse(savedData);
+
+  const nameInput = document.querySelector('#name-service');
+
+  if (nameInput && data.name) {
+    nameInput.value = data.name;
+  }
+
+  sessionStorage.removeItem('contactFormData');
+};
+
+/**
+ * Displays Services step 3 with data from steps 1 and 2.
+ */
+const showServicesThanks = () => {
+  const name = document.querySelector('#name-service')?.value ?? '';
+
+  const premiumServices = [
+    ...document.querySelectorAll('input[name="premium"]:checked'),
+  ].map((input) => input.closest('label').textContent.trim());
+
+  const thanks = form.querySelector(
+    '.contact-form__flow--services [data-step="3"]'
+  );
+
+  /*
+   * Customer name
+   */
+  const nameElement = thanks.querySelectorAll('.name');
+
+  nameElement.forEach((element) => {
+    element.textContent = name;
+  });
+
+  /*
+   * Premium services
+   */
+  const premiumList = thanks.querySelector('.contact__quote__item-premium');
+
+  if (premiumList) {
+    premiumList.innerHTML = '';
+
+    if (premiumServices.length === 0) {
+      const item = document.createElement('li');
+      item.textContent = 'None';
+      premiumList.appendChild(item);
+    } else {
+      premiumServices.forEach((service) => {
+        const item = document.createElement('li');
+
+        item.textContent = service;
+        premiumList.appendChild(item);
+      });
+    }
+  }
+
+  showStep('services', 3);
+};
+
+/**
+ * Displays Classes step 2 with data from steps 1.
+ */
+const showClassesThanks = () => {
+  const name = document.querySelector('#name-class')?.value ?? '';
+
+  const thanks = form.querySelector(
+    '.contact-form__flow--classes [data-step="2"]'
+  );
+
+  /*
+   * Customer name
+   */
+  const nameElement = thanks.querySelectorAll('.name');
+
+  nameElement.forEach((element) => {
+    element.textContent = name;
+  });
+
+  showStep('classes', 2);
 };
 
 tabs.forEach((tab) => {
@@ -113,12 +204,13 @@ form.addEventListener('submit', (event) => {
   }
 
   if (formType === 'services' && stepNumber === 2) {
-    showStep('services', 3);
+    showServicesThanks();
     return;
   }
 
   if (formType === 'classes' && stepNumber === 1) {
-    showStep('classes', 2);
+    showClassesThanks();
+    return;
   }
 });
 
@@ -126,4 +218,24 @@ document.querySelectorAll('input[name="contact-method"]').forEach((radio) => {
   radio.addEventListener('change', updateContactMethod);
 });
 
-initializeForm('services');
+/**
+ * Initial state
+ *
+ * Normal:
+ *   /pages/contact.html
+ *   → Services Step 1
+ *
+ * From home:
+ *   /pages/contact.html?form=services&step=2
+ *   → Services Step 2
+ */
+const params = new URLSearchParams(window.location.search);
+
+const initialFormType =
+  params.get('form') === 'classes' ? 'classes' : 'services';
+
+const initialStep = Number(params.get('step')) || 1;
+
+initializeForm(initialFormType, initialStep);
+
+restoreHomeFormData();
