@@ -50,3 +50,5 @@ document
 document.querySelectorAll('input[name="contact-method"]').forEach((radio) => {
   radio.addEventListener('change', updateContactMethod);
 });
+
+updateContactMethod();
