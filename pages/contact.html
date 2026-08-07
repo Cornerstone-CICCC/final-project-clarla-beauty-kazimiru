@@ -61,12 +61,7 @@
       </p>
 
       <div class="socials">
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Call Carla Beauty"
-        >
+        <a href="tel:+10000000000" aria-label="Call Carla Beauty">
           <img src="/assets/icons/phone.svg" alt="" />
           <span>+1 0000000000</span>
         </a>
@@ -203,7 +198,7 @@
 
                 <input
                   class="contact__input"
-                  id="name"
+                  id="name-service"
                   type="text"
                   name="name"
                   placeholder="Your name"
@@ -363,7 +358,6 @@
                       type="radio"
                       name="contact-time"
                       value="Morning"
-                      checked
                     />
                     <span class="contact__radio-custom"></span>
                     <span>Morning</span>
@@ -375,7 +369,6 @@
                       type="radio"
                       name="contact-time"
                       value="Afternoon"
-                      checked
                     />
                     <span class="contact__radio-custom"></span>
                     <span>Afternoon</span>
@@ -387,7 +380,6 @@
                       type="radio"
                       name="contact-time"
                       value="Evening"
-                      checked
                     />
                     <span class="contact__radio-custom"></span>
                     <span>Evening</span>
@@ -395,11 +387,11 @@
                 </div>
               </fieldset>
 
-              <button class="button" type="submit">Next</button>
+              <button class="button" type="button">Next</button>
             </fieldset>
 
             <!-- Services - Step 2 -->
-            <fieldset class="contact-form__step" data-step="2">
+            <fieldset class="contact-form__step" data-step="2" disabled>
               <fieldset class="contact__group contact__group--service">
                 <legend class="contact__title">Service</legend>
 
@@ -407,10 +399,9 @@
                   <label class="contact__option">
                     <input
                       class="contact__radio"
-                      type="radio"
+                      type="checkbox"
                       name="service"
                       value="makeup"
-                      checked
                     />
                     <span class="contact__option-label">Makeup</span>
                   </label>
@@ -435,7 +426,8 @@
                     class="contact__input contact__input--location"
                     type="text"
                     name="event-location"
-                    aria-level="Event Location"
+                    aria-label="Event Location"
+                    placeholder="Search address"
                   />
                 </div>
 
@@ -456,7 +448,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="deep-skin-cleansing"
                     />
                     Deep skin cleansing
@@ -465,7 +457,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="bleach-body-hair"
                     />
                     Bleach body hair
@@ -474,7 +466,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="hydromassage"
                     />
                     Hydromassage
@@ -483,7 +475,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="hair-moisture"
                     />
                     Hair Moisture
@@ -492,7 +484,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="waxing"
                     />
                     Waxing
@@ -501,7 +493,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="foot-and-hand-spa"
                     />
                     Foot and hand SPA
@@ -510,7 +502,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="relaxing-massage"
                     />
                     Relaxing massage
@@ -519,7 +511,7 @@
                     <input
                       class="contact__checkbox"
                       type="checkbox"
-                      name="premium[]"
+                      name="premium"
                       value="gommage"
                     />
                     Gommage (body exfoliation and hydration)
@@ -685,7 +677,7 @@
 
             <!-- Services - Step 3 - Thanks -->
             <div
-              class="contact-form__step conact-form__step--thanks"
+              class="contact-form__step contact-form__step--thanks"
               data-step="3"
             >
               <h2 class="contact__thanks__title">
@@ -701,7 +693,7 @@
                 with you.
               </p>
 
-              <button class="contact__edit-button">
+              <button class="contact__edit-button" type="button">
                 Edit Details
                 <img src="/assets/icons/arrow-right.svg" alt="" />
               </button>
@@ -750,7 +742,7 @@
                 </div>
 
                 <div class="contact__quote__footer">
-                  <button class="button">Share</button>
+                  <button class="button" type="button">Share</button>
 
                   <a href="/" class="contact__quote__footer__logo">
                     <img
@@ -761,9 +753,7 @@
 
                   <div class="socials__thanks">
                     <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="tel:+10000000000"
                       aria-label="Call Carla Beauty"
                       class="phone"
                     >
@@ -802,7 +792,7 @@
             data-form-type="classes"
           >
             <!-- Classes - Step 1 -->
-            <fieldset class="contact-form__step" data-step="1">
+            <fieldset class="contact-form__step" data-step="1" disabled>
               <fieldset class="contact__group contact__group--event-type">
                 <legend class="contact__title">Class</legend>
 
@@ -888,7 +878,7 @@
 
                 <input
                   class="contact__input"
-                  id="name"
+                  id="name-class"
                   type="text"
                   name="name"
                   placeholder="Your name"
@@ -1030,7 +1020,7 @@
             <!-- Classes Step 2 - Thanks -->
 
             <div
-              class="contact-form__step conact-form__step--thanks"
+              class="contact-form__step contact-form__step--thanks "
               data-step="2"
             >
               <h2 class="contact__thanks__title">
@@ -1052,12 +1042,7 @@
               </h3>
 
               <div class="socials__thanks">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Call Carla Beauty"
-                >
+                <a href="tel:+10000000000" aria-label="Call Carla Beauty">
                   <img src="/assets/icons/phone.svg" alt="" />
                   <span>+1 0000000000</span>
                 </a>
@@ -1100,12 +1085,7 @@
         <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
 
         <div class="footer__socials">
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Call Carla Beauty"
-          >
+          <a href="tel:+10000000000" aria-label="Call Carla Beauty">
             <img src="/assets/icons/phone.svg" alt="" />
           </a>
 
@@ -1175,9 +1155,7 @@
           <img src="/assets/icons/instagram.svg" alt="Instagram" />
         </a>
         <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="tel:+10000000000"
           class="floating-contact__link floating-contact__link--phone"
         >
           <img src="/assets/icons/phone.svg" alt="Call" />
