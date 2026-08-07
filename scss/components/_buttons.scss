@@ -8,8 +8,10 @@
   transform: translateY(0);
   transition: all 0.3s ease-out;
 
-  border: 0.8px solid $color-text-darkest-brown;
-  color: $color-text-darkest-brown;
+  border: 0.8px solid $color-text-red-brown;
+  color: $color-text-red-brown;
+
+  text-align: center;
 }
 
 .button:hover {
