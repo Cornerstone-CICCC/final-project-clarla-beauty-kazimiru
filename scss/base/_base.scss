@@ -33,3 +33,16 @@ select {
     border-color: $color-text-dark-pink;
   }
 }
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+  main {
+    h2 {
+      @include flex-center;
+    }
+  }
+}
