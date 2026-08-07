@@ -91,6 +91,10 @@
       display: flex;
       flex-direction: column;
       gap: $spacing-200;
+
+      &[hidden] {
+        display: none;
+      }
     }
 
     &__title {
