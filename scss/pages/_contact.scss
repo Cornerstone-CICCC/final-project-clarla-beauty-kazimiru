@@ -2,6 +2,11 @@
 @use '../abstracts/mixins' as *;
 
 .contact-page {
+  .floating-contact__button {
+    background-color: $color-dark-pink;
+    opacity: 0.8;
+  }
+
   .title {
     text-align: center;
     @include flex-col;
