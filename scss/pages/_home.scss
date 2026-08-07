@@ -536,10 +536,11 @@
     }
 
     .classes {
+      max-width: 1400px;
+      margin-inline: auto;
       display: grid;
       grid-template-columns: 1.5fr, 1fr;
 
-      margin-inline: $spacing-500;
       padding-block: $spacing-500;
       padding-inline: $spacing-800;
 
@@ -602,8 +603,18 @@
         width: auto;
       }
 
-      &__portrait-wrapper::after {
-        inset: 30px;
+      &__portrait-wrapper {
+        width: 407px;
+        height: 530px;
+        justify-self: end;
+
+        img {
+          width: 100%;
+        }
+
+        &::after {
+          inset: 30px;
+        }
       }
     }
 

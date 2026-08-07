@@ -856,9 +856,10 @@ select:focus {
     left: -2.5rem;
   }
   .home .classes {
+    max-width: 1400px;
+    margin-inline: auto;
     display: grid;
     grid-template-columns: 1.5fr, 1fr;
-    margin-inline: 3rem;
     padding-block: 3rem;
     padding-inline: 7.5rem;
     column-gap: 5rem;
@@ -909,6 +910,14 @@ select:focus {
   }
   .home .classes .button {
     width: auto;
+  }
+  .home .classes__portrait-wrapper {
+    width: 407px;
+    height: 530px;
+    justify-self: end;
+  }
+  .home .classes__portrait-wrapper img {
+    width: 100%;
   }
   .home .classes__portrait-wrapper::after {
     inset: 30px;
