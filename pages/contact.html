@@ -113,7 +113,7 @@
             class="contact-form__flow contact-form__flow--services"
             data-form-type="services"
           >
-            <!-- Step 1 -->
+            <!-- Services - Step 1 -->
             <fieldset class="contact-form__step" data-step="1">
               <fieldset class="contact__group contact__group--event-type">
                 <legend class="contact__title">Event Type</legend>
@@ -398,17 +398,17 @@
               <button class="button" type="submit">Next</button>
             </fieldset>
 
-            <!-- Step 2 -->
-            <fieldset class="contact-form__step" data-step="2" disabled>
-              <fieldset class="contact__group contact__group--event-type">
-                <legend class="contact__title">Event Type</legend>
+            <!-- Services - Step 2 -->
+            <fieldset class="contact-form__step" data-step="2">
+              <fieldset class="contact__group contact__group--service">
+                <legend class="contact__title">Service</legend>
 
                 <div class="contact__options">
                   <label class="contact__option">
                     <input
                       class="contact__radio"
                       type="radio"
-                      name="event-type"
+                      name="service"
                       value="makeup"
                       checked
                     />
@@ -418,8 +418,8 @@
                   <label class="contact__option">
                     <input
                       class="contact__radio"
-                      type="radio"
-                      name="event-type"
+                      type="checkbox"
+                      name="service"
                       value="hairstyle"
                     />
                     <span class="contact__option-label">Hairstyle</span>
@@ -443,10 +443,229 @@
                   <input
                     class="contact__checkbox"
                     type="checkbox"
-                    name="event-date-undecided"
+                    name="event-location-undecided"
                   />
                   <span>Not decided</span>
                 </label>
+              </fieldset>
+
+              <fieldset class="contact__group">
+                <legend class="contact__title">Premium service</legend>
+                <div class="contact__premium">
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="deep-skin-cleansing"
+                    />
+                    Deep skin cleansing
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="bleach-body-hair"
+                    />
+                    Bleach body hair
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="hydromassage"
+                    />
+                    Hydromassage
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="hair-moisture"
+                    />
+                    Hair Moisture
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="waxing"
+                    />
+                    Waxing
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="foot-and-hand-spa"
+                    />
+                    Foot and hand SPA
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="relaxing-massage"
+                    />
+                    Relaxing massage
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium[]"
+                      value="gommage"
+                    />
+                    Gommage (body exfoliation and hydration)
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact__group contact__group--guest">
+                <legend class="contact__title">
+                  Anyone else need service?
+                </legend>
+                <div class="contact__guest-list">
+                  <div class="contact__guest-row">
+                    <div class="contact__guest-counter-wrapper">
+                      <span class="contact__guest-member">Groom</span>
+                      <div class="contact__guest-counter" data-guest-counter>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="decrease"
+                        >
+                          -
+                        </button>
+                        <span
+                          class="contact__guest-counter-value"
+                          data-counter-value
+                        >
+                          0
+                        </span>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__guest-service">
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_groom_makeup"
+                          checked
+                        />
+                        Makeup
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="contact__guest-row">
+                    <div class="contact__guest-counter-wrapper">
+                      <span class="contact__guest-member">Bridesmaid</span>
+                      <div class="contact__guest-counter" data-guest-counter>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="decrease"
+                        >
+                          -
+                        </button>
+                        <span
+                          class="contact__guest-counter-value"
+                          data-counter-value
+                        >
+                          0
+                        </span>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__guest-service">
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_bridesmaid_hair"
+                          checked
+                        />
+                        Hairstyle
+                      </label>
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_bridesmaid_makeup"
+                          checked
+                        />
+                        Makeup
+                      </label>
+                    </div>
+                  </div>
+                  <div class="contact__guest-row">
+                    <div class="contact__guest-counter-wrapper">
+                      <span class="contact__guest-member">Flower girl</span>
+                      <div class="contact__guest-counter" data-guest-counter>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="decrease"
+                        >
+                          -
+                        </button>
+                        <span
+                          class="contact__guest-counter-value"
+                          data-counter-value
+                        >
+                          0
+                        </span>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__guest-service">
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_flower_hair"
+                          checked
+                        />
+                        Hairstyle
+                      </label>
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_flower_makeup"
+                          checked
+                        />
+                        Makeup
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
 
               <fieldset class="contact__group">
@@ -464,6 +683,7 @@
               <button class="button" type="submit">Submit</button>
             </fieldset>
 
+            <!-- Services - Step 3 - Thanks -->
             <div
               class="contact-form__step conact-form__step--thanks"
               data-step="3"
@@ -471,7 +691,9 @@
               <h2 class="contact__thanks__title">
                 Thanks
                 <span class="name"></span>
-                , we will contact you soon!
+                ,
+                <br />
+                we will contact you soon!
               </h2>
 
               <p class="contact__thanks__description">
@@ -484,40 +706,53 @@
                 <img src="/assets/icons/arrow-right.svg" alt="" />
               </button>
 
-              <div class="contact__quote__inner">
+              <div class="contact__quote">
                 <img
                   src="/assets/images/contact-cosmetics.png"
                   alt="Cosmetics"
                 />
 
                 <h3>Your estimated price will be:</h3>
-                <p>CAD 1,000 - 1,200</p>
+                <p class="contact__quote__price">CAD 1,000 - 1,200</p>
 
                 <div class="contact__quote__details">
                   <div class="contact__quote__category">
                     <h4>Basic services</h4>
                     <ul class="contact__quote__item">
-                      <li>Coming soon</li>
+                      <li>Exclusive room</li>
+                      <li>Hairstyle</li>
+                      <li>Hairstyle trial</li>
+                      <li>Makeup</li>
+                      <li>Makeup trial</li>
+                      <li>Manicure</li>
+                      <li>Pedicure</li>
+                      <li>Eyebrow design</li>
+                      <li>Coffee or tea with cake</li>
+                      <li>Bathtub</li>
+                      <li>Help with getting dressed</li>
                     </ul>
                   </div>
+                  <div class="contact__quote__additional-service">
+                    <div class="contact__quote__category">
+                      <h4>Premium services</h4>
+                      <ul class="contact__quote__item">
+                        <li>Coming soon</li>
+                      </ul>
+                    </div>
 
-                  <div class="contact__quote__category">
-                    <h4>Premium services</h4>
-                    <ul class="contact__quote__item">
-                      <li>Coming soon</li>
-                    </ul>
-                  </div>
-
-                  <div class="contact__quote__category">
-                    <h4>Additional attendees</h4>
-                    <ul class="contact__quote__item">
-                      <li>Coming soon</li>
-                    </ul>
+                    <div class="contact__quote__category">
+                      <h4>Additional attendees</h4>
+                      <ul class="contact__quote__item">
+                        <li>Coming soon</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
                 <div class="contact__quote__footer">
-                  <a href="/" class="header__logo">
+                  <button class="button">Share</button>
+
+                  <a href="/" class="contact__quote__footer__logo">
                     <img
                       src="/assets/logos/carla-beauty-combination.svg"
                       alt="Carla Beauty"
@@ -525,6 +760,17 @@
                   </a>
 
                   <div class="socials__thanks">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Call Carla Beauty"
+                      class="phone"
+                    >
+                      <img src="/assets/icons/phone.svg" alt="" />
+                      <span>+1 0000000000</span>
+                    </a>
+
                     <a
                       href="#"
                       target="_blank"
@@ -555,7 +801,7 @@
             class="contact-form__flow contact-form__flow--classes"
             data-form-type="classes"
           >
-            <!-- Step 1 -->
+            <!-- Classes - Step 1 -->
             <fieldset class="contact-form__step" data-step="1">
               <fieldset class="contact__group contact__group--event-type">
                 <legend class="contact__title">Class</legend>
@@ -780,6 +1026,8 @@
 
               <button class="button" type="submit">Next</button>
             </fieldset>
+
+            <!-- Classes Step 2 - Thanks -->
 
             <div
               class="contact-form__step conact-form__step--thanks"

@@ -14,3 +14,22 @@ main {
     padding-top: $header-height-desktop;
   }
 }
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+textarea,
+select {
+  padding-inline: $spacing-200;
+
+  background-color: $color-bg-accent-white;
+  color: $color-text-primary;
+
+  outline: none;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border-color: $color-text-dark-pink;
+  }
+}
