@@ -355,6 +355,11 @@
         letter-spacing: 0%;
         font-size: $font-size-525;
       }
+
+      &__talksoon {
+        color: $color-text-primary;
+        font-size: $font-size-500;
+      }
     }
 
     &__edit-button {
@@ -425,8 +430,31 @@
 
         gap: $spacing-300;
 
+        a {
+          display: flex;
+          gap: $spacing-150;
+          color: $color-text-red-brown;
+          font-size: $font-size-200;
+        }
+
         span {
           display: none;
+        }
+      }
+    }
+
+    &-form__flow--classes {
+      .socials__thanks {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-150;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: $spacing-150;
+          color: $color-text-red-brown;
+          font-size: $font-size-200;
         }
       }
     }
@@ -537,12 +565,6 @@
               display: none;
             }
 
-            a {
-              display: flex;
-              gap: $spacing-150;
-              color: $color-text-red-brown;
-              font-size: $font-size-200;
-            }
             span {
               display: block;
             }
