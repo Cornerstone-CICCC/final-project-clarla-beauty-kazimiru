@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body {
   background-color: $color-bg-primary;
 }
@@ -10,5 +12,37 @@ main {
 
   @include media-query {
     padding-top: $header-height-desktop;
+  }
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+textarea,
+select {
+  padding-inline: $spacing-200;
+
+  background-color: $color-bg-accent-white;
+  color: $color-text-primary;
+
+  outline: none;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border-color: $color-text-dark-pink;
+  }
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+  main {
+    h2 {
+      @include flex-center;
+    }
   }
 }

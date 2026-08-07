@@ -1,0 +1,1191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Contact - Carla Beauty</title>
+  </head>
+  <body class="contact-page">
+    <header class="header">
+      <nav class="header__nav" aria-label="Header navigation">
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="header-navigation"
+        >
+          <img src="/assets/icons/menu.svg" alt="Menu" />
+        </button>
+
+        <div class="header__nav--left">
+          <a href="/" class="header__link nav__link">Home</a>
+          <a href="/pages/my-work.html" class="header__link nav__link">
+            My work
+          </a>
+          <a href="/pages/services.html" class="header__link nav__link">
+            Services
+          </a>
+          <a href="/pages/classes.html" class="header__link nav__link">
+            Classes
+          </a>
+        </div>
+
+        <a href="/" class="header__logo">
+          <img
+            src="/assets/logos/carla-beauty-combination.svg"
+            alt="Carla Beauty"
+          />
+        </a>
+
+        <div class="header__nav--right">
+          <a href="/pages/beauty-tips.html" class="header__link nav__link">
+            Beauty Tips
+          </a>
+          <a href="/pages/about.html" class="header__link nav__link">About</a>
+          <a href="/pages/contact.html" class="header__link nav__link">
+            Contact
+          </a>
+          <a
+            href="https://www.instagram.com/carlabeatrizs_"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="header__social"
+          >
+            <img src="/assets/icons/instagram.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="title">Contact</h2>
+      <p class="description">
+        Get a quote and book a free consultation for your special day or our
+        academy services.
+      </p>
+
+      <div class="socials">
+        <a href="tel:+10000000000" aria-label="Call Carla Beauty">
+          <img src="/assets/icons/phone.svg" alt="" />
+          <span>+1 0000000000</span>
+        </a>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact Carla Beauty on WhatsApp"
+        >
+          <img src="/assets/icons/whatsapp.svg" alt="" />
+          <span>+1 0000000000</span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/carlabeatrizs_"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Carla Beauty on Instagram"
+        >
+          <img src="/assets/icons/instagram.svg" alt="" />
+          <span>carlabeatrizs_</span>
+        </a>
+      </div>
+
+      <section class="contact" id="form">
+        <div class="contact__tabs">
+          <button
+            class="contact__tab contact__tab--active"
+            type="button"
+            data-form-type="services"
+          >
+            Services
+          </button>
+
+          <button class="contact__tab" type="button" data-form-type="classes">
+            Classes
+          </button>
+        </div>
+
+        <form class="contact__form">
+          <!-- Service -->
+          <fieldset
+            class="contact-form__flow contact-form__flow--services"
+            data-form-type="services"
+          >
+            <!-- Services - Step 1 -->
+            <fieldset class="contact-form__step" data-step="1">
+              <fieldset class="contact__group contact__group--event-type">
+                <legend class="contact__title">Event Type</legend>
+
+                <div class="contact__options">
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="event-type"
+                      value="wedding"
+                      checked
+                    />
+                    <span class="contact__option-label">Wedding</span>
+                  </label>
+
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="event-type"
+                      value="party"
+                    />
+                    <span class="contact__option-label">Party</span>
+                  </label>
+
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="event-type"
+                      value="photoshoot"
+                    />
+                    <span class="contact__option-label">Photoshoot</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="contact__row">
+                <fieldset class="contact__group">
+                  <legend class="contact__title">Event Date</legend>
+
+                  <div class="contact__input-wrapper">
+                    <input
+                      class="contact__input contact__input--date"
+                      type="date"
+                      name="event-date"
+                      aria-label="Event date"
+                    />
+                  </div>
+
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="event-date-undecided"
+                    />
+                    <span>Not decided</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="contact__group">
+                  <legend class="contact__title">Event Time</legend>
+
+                  <div class="contact__select-wrapper">
+                    <select class="contact__select" name="event-time">
+                      <option value="full-day">Full day</option>
+                      <option value="morning">Morning</option>
+                      <option value="afternoon">Afternoon</option>
+                      <option value="evening">Evening</option>
+                    </select>
+                  </div>
+
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="time-undecided"
+                    />
+                    <span>Not decided</span>
+                  </label>
+                </fieldset>
+              </div>
+
+              <fieldset class="contact__group contact__group--name">
+                <legend class="contact__title">Name</legend>
+
+                <input
+                  class="contact__input"
+                  id="name-service"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </fieldset>
+
+              <fieldset class="contact__group contact__group--contact">
+                <legend class="contact__title">Contact</legend>
+
+                <div class="contact__contact-options">
+                  <!-- Call -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="call"
+                        checked
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Call</span>
+                    </label>
+
+                    <div class="contact__method-input contact__phone-wrapper">
+                      <select
+                        class="contact__country-code"
+                        name="call-country-code"
+                        aria-label="Call country code"
+                        disabled
+                      >
+                        <option value="+1">+1</option>
+                        <option value="+81">+81</option>
+                      </select>
+
+                      <input
+                        class="contact__phone-input"
+                        type="tel"
+                        name="call-phone"
+                        placeholder="Your mobile number"
+                        autocomplete="tel"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="whatsapp"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>WhatsApp</span>
+                    </label>
+
+                    <div class="contact__method-input contact__phone-wrapper">
+                      <select
+                        class="contact__country-code"
+                        name="whatsapp-country-code"
+                        aria-label="WhatsApp country code"
+                        disabled
+                      >
+                        <option value="+1">+1</option>
+                        <option value="+81">+81</option>
+                      </select>
+
+                      <input
+                        class="contact__phone-input"
+                        type="tel"
+                        name="whatsapp-phone"
+                        placeholder="Your mobile number"
+                        autocomplete="tel"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <!-- SMS -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="sms"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>SMS</span>
+                    </label>
+
+                    <div class="contact__method-input">
+                      <input
+                        class="contact__input"
+                        type="text"
+                        name="sms-account"
+                        placeholder="Your SMS account"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="email"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Email</span>
+                    </label>
+
+                    <div class="contact__method-input">
+                      <input
+                        class="contact__input"
+                        type="email"
+                        name="email"
+                        placeholder="Your email address"
+                        autocomplete="email"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact__group contact__group--contact-time">
+                <legend class="contact__title contact__title--small">
+                  When do you want us to call?
+                </legend>
+
+                <div class="contact__contact-options">
+                  <label class="contact__contact-option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="contact-time"
+                      value="I don't mind"
+                      checked
+                    />
+                    <span class="contact__radio-custom"></span>
+                    <span>I don't mind</span>
+                  </label>
+
+                  <label class="contact__contact-option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="contact-time"
+                      value="Morning"
+                    />
+                    <span class="contact__radio-custom"></span>
+                    <span>Morning</span>
+                  </label>
+
+                  <label class="contact__contact-option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="contact-time"
+                      value="Afternoon"
+                    />
+                    <span class="contact__radio-custom"></span>
+                    <span>Afternoon</span>
+                  </label>
+
+                  <label class="contact__contact-option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="contact-time"
+                      value="Evening"
+                    />
+                    <span class="contact__radio-custom"></span>
+                    <span>Evening</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <button class="button" type="submit">Next</button>
+            </fieldset>
+
+            <!-- Services - Step 2 -->
+            <fieldset class="contact-form__step" data-step="2" disabled>
+              <fieldset class="contact__group contact__group--service">
+                <legend class="contact__title">Service</legend>
+
+                <div class="contact__options">
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="checkbox"
+                      name="service"
+                      value="makeup"
+                    />
+                    <span class="contact__option-label">Makeup</span>
+                  </label>
+
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="checkbox"
+                      name="service"
+                      value="hairstyle"
+                    />
+                    <span class="contact__option-label">Hairstyle</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact__group">
+                <legend class="contact__title">Event Location</legend>
+
+                <div class="contact__input-wrapper">
+                  <input
+                    class="contact__input contact__input--location"
+                    type="text"
+                    name="event-location"
+                    aria-label="Event Location"
+                    placeholder="Search address"
+                  />
+                </div>
+
+                <label class="contact__checkbox-label">
+                  <input
+                    class="contact__checkbox"
+                    type="checkbox"
+                    name="event-location-undecided"
+                  />
+                  <span>Not decided</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="contact__group">
+                <legend class="contact__title">Premium service</legend>
+                <div class="contact__premium">
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="deep-skin-cleansing"
+                    />
+                    Deep skin cleansing
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="bleach-body-hair"
+                    />
+                    Bleach body hair
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="hydromassage"
+                    />
+                    Hydromassage
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="hair-moisture"
+                    />
+                    Hair Moisture
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="waxing"
+                    />
+                    Waxing
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="foot-and-hand-spa"
+                    />
+                    Foot and hand SPA
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="relaxing-massage"
+                    />
+                    Relaxing massage
+                  </label>
+                  <label class="contact__checkbox-label">
+                    <input
+                      class="contact__checkbox"
+                      type="checkbox"
+                      name="premium"
+                      value="gommage"
+                    />
+                    Gommage (body exfoliation and hydration)
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact__group contact__group--guest">
+                <legend class="contact__title">
+                  Anyone else need service?
+                </legend>
+                <div class="contact__guest-list">
+                  <div class="contact__guest-row">
+                    <div class="contact__guest-counter-wrapper">
+                      <span class="contact__guest-member">Groom</span>
+                      <div class="contact__guest-counter" data-guest-counter>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="decrease"
+                        >
+                          -
+                        </button>
+                        <span
+                          class="contact__guest-counter-value"
+                          data-counter-value
+                        >
+                          0
+                        </span>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__guest-service">
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_groom_makeup"
+                          checked
+                        />
+                        Makeup
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="contact__guest-row">
+                    <div class="contact__guest-counter-wrapper">
+                      <span class="contact__guest-member">Bridesmaid</span>
+                      <div class="contact__guest-counter" data-guest-counter>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="decrease"
+                        >
+                          -
+                        </button>
+                        <span
+                          class="contact__guest-counter-value"
+                          data-counter-value
+                        >
+                          0
+                        </span>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__guest-service">
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_bridesmaid_hair"
+                          checked
+                        />
+                        Hairstyle
+                      </label>
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_bridesmaid_makeup"
+                          checked
+                        />
+                        Makeup
+                      </label>
+                    </div>
+                  </div>
+                  <div class="contact__guest-row">
+                    <div class="contact__guest-counter-wrapper">
+                      <span class="contact__guest-member">Flower girl</span>
+                      <div class="contact__guest-counter" data-guest-counter>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="decrease"
+                        >
+                          -
+                        </button>
+                        <span
+                          class="contact__guest-counter-value"
+                          data-counter-value
+                        >
+                          0
+                        </span>
+                        <button
+                          type="button"
+                          class="contact__guest-counter-button"
+                          data-counter-action="increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__guest-service">
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_flower_hair"
+                          checked
+                        />
+                        Hairstyle
+                      </label>
+                      <label class="contact__checkbox-label">
+                        <input
+                          class="contact__checkbox"
+                          type="checkbox"
+                          name="guest_flower_makeup"
+                          checked
+                        />
+                        Makeup
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact__group">
+                <legend class="contact__title">
+                  Anything you want us to know?
+                </legend>
+
+                <textarea
+                  class="contact__textarea"
+                  name="request"
+                  placeholder="Your message"
+                ></textarea>
+              </fieldset>
+
+              <button class="button" type="submit">Submit</button>
+            </fieldset>
+
+            <!-- Services - Step 3 - Thanks -->
+            <div
+              class="contact-form__step contact-form__step--thanks"
+              data-step="3"
+            >
+              <!-- prettier-ignore -->
+              <h2 class="contact__thanks__title">
+                Thanks
+                <span class="name"></span>,
+                <br />
+                we will contact you soon!
+              </h2>
+
+              <p class="contact__thanks__description">
+                We will call +1-123-4567-890 to confirm the appointment details
+                with you.
+              </p>
+
+              <button class="contact__edit-button" type="button">
+                Edit Details
+                <img src="/assets/icons/arrow-right.svg" alt="" />
+              </button>
+
+              <div class="contact__quote">
+                <img
+                  src="/assets/images/contact-cosmetics.png"
+                  alt="Cosmetics"
+                />
+
+                <h3>Your estimated price will be:</h3>
+                <p class="contact__quote__price">CAD 1,000 - 1,200</p>
+
+                <div class="contact__quote__details">
+                  <div class="contact__quote__category">
+                    <h4>Basic services</h4>
+                    <ul class="contact__quote__item">
+                      <li>Exclusive room</li>
+                      <li>Hairstyle</li>
+                      <li>Hairstyle trial</li>
+                      <li>Makeup</li>
+                      <li>Makeup trial</li>
+                      <li>Manicure</li>
+                      <li>Pedicure</li>
+                      <li>Eyebrow design</li>
+                      <li>Coffee or tea with cake</li>
+                      <li>Bathtub</li>
+                      <li>Help with getting dressed</li>
+                    </ul>
+                  </div>
+                  <div class="contact__quote__additional-service">
+                    <div class="contact__quote__category">
+                      <h4>Premium services</h4>
+                      <ul
+                        class="contact__quote__item contact__quote__item-premium"
+                      >
+                        <li>Coming soon</li>
+                      </ul>
+                    </div>
+
+                    <div class="contact__quote__category">
+                      <h4>Additional attendees</h4>
+                      <ul class="contact__quote__item">
+                        <li>Coming soon</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact__quote__footer">
+                  <button class="button" type="button">Share</button>
+
+                  <a href="/" class="contact__quote__footer__logo">
+                    <img
+                      src="/assets/logos/carla-beauty-combination.svg"
+                      alt="Carla Beauty"
+                    />
+                  </a>
+
+                  <div class="socials__thanks">
+                    <a
+                      href="tel:+10000000000"
+                      aria-label="Call Carla Beauty"
+                      class="phone"
+                    >
+                      <img src="/assets/icons/phone.svg" alt="" />
+                      <span>+1 0000000000</span>
+                    </a>
+
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Contact Carla Beauty on WhatsApp"
+                    >
+                      <img src="/assets/icons/whatsapp.svg" alt="" />
+                      <span>+1 0000000000</span>
+                    </a>
+
+                    <a
+                      href="https://www.instagram.com/carlabeatrizs_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Visit Carla Beauty on Instagram"
+                    >
+                      <img src="/assets/icons/instagram.svg" alt="" />
+                      <span>carlabeatrizs_</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Classes -->
+          <fieldset
+            class="contact-form__flow contact-form__flow--classes"
+            data-form-type="classes"
+          >
+            <!-- Classes - Step 1 -->
+            <fieldset class="contact-form__step" data-step="1" disabled>
+              <fieldset class="contact__group contact__group--event-type">
+                <legend class="contact__title">Class</legend>
+
+                <div class="contact__options">
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="class-type"
+                      value="1-on-1"
+                      checked
+                    />
+                    <span class="contact__option-label">
+                      1-on-1 Master Subscription
+                    </span>
+                  </label>
+
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="class-type"
+                      value="Workshop"
+                    />
+                    <span class="contact__option-label">
+                      1-day Makeup workshop
+                    </span>
+                  </label>
+
+                  <label class="contact__option">
+                    <input
+                      class="contact__radio"
+                      type="radio"
+                      name="class-type"
+                      value="Beginner"
+                    />
+                    <span class="contact__option-label">
+                      Self-Makeup beginner class
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact__group">
+                <legend class="contact__title contact__title--class-date">
+                  Class Date
+                </legend>
+                <p id="date-hint" class="contact__hint">
+                  When you would like to take your class?
+                </p>
+                <div class="contact__input-wrapper">
+                  <input
+                    class="contact__input contact__input--date"
+                    type="date"
+                    name="class-date"
+                    aria-label="Class date"
+                    aria-describedby="date-hint"
+                  />
+                </div>
+
+                <label class="contact__checkbox-label">
+                  <input
+                    class="contact__checkbox"
+                    type="checkbox"
+                    name="class-date-undecided"
+                  />
+                  <span>Doesn't matter</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="contact__group">
+                <legend class="contact__title">Any questions?</legend>
+
+                <textarea
+                  class="contact__textarea"
+                  name="question"
+                  placeholder="Your message"
+                ></textarea>
+              </fieldset>
+
+              <fieldset class="contact__group contact__group--name">
+                <legend class="contact__title">Name</legend>
+
+                <input
+                  class="contact__input"
+                  id="name-class"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </fieldset>
+
+              <fieldset class="contact__group contact__group--contact">
+                <legend class="contact__title">Contact</legend>
+
+                <div class="contact__contact-options">
+                  <!-- Call -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="call"
+                        checked
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Call</span>
+                    </label>
+
+                    <div class="contact__method-input contact__phone-wrapper">
+                      <select
+                        class="contact__country-code"
+                        name="call-country-code"
+                        aria-label="Call country code"
+                        disabled
+                      >
+                        <option value="+1">+1</option>
+                        <option value="+81">+81</option>
+                      </select>
+
+                      <input
+                        class="contact__phone-input"
+                        type="tel"
+                        name="call-phone"
+                        placeholder="Your mobile number"
+                        autocomplete="tel"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="whatsapp"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>WhatsApp</span>
+                    </label>
+
+                    <div class="contact__method-input contact__phone-wrapper">
+                      <select
+                        class="contact__country-code"
+                        name="whatsapp-country-code"
+                        aria-label="WhatsApp country code"
+                        disabled
+                      >
+                        <option value="+1">+1</option>
+                        <option value="+81">+81</option>
+                      </select>
+
+                      <input
+                        class="contact__phone-input"
+                        type="tel"
+                        name="whatsapp-phone"
+                        placeholder="Your mobile number"
+                        autocomplete="tel"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <!-- SMS -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="sms"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>SMS</span>
+                    </label>
+
+                    <div class="contact__method-input">
+                      <input
+                        class="contact__input"
+                        type="text"
+                        name="sms-account"
+                        placeholder="Your SMS account"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="contact__method">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-method"
+                        value="email"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Email</span>
+                    </label>
+
+                    <div class="contact__method-input">
+                      <input
+                        class="contact__input"
+                        type="email"
+                        name="email"
+                        placeholder="Your email address"
+                        autocomplete="email"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <button class="button" type="submit">Next</button>
+            </fieldset>
+
+            <!-- Classes Step 2 - Thanks -->
+
+            <div
+              class="contact-form__step contact-form__step--thanks"
+              data-step="2"
+            >
+              <!-- prettier-ignore -->
+              <h2 class="contact__thanks__title">
+                Thanks
+                <span class="name"></span>, <br>
+                we will contact you soon!
+              </h2>
+
+              <p class="contact__thanks__description">
+                We will call +1-0000000000 to get back to your enquiry
+              </p>
+
+              <img src="/assets/images/contact-cosmetics.png" alt="Cosmetics" />
+
+              <h3 class="contact__thanks__talksoon">
+                Talk soon
+                <span class="name"></span>
+                :)
+              </h3>
+
+              <div class="socials__thanks">
+                <a href="tel:+10000000000" aria-label="Call Carla Beauty">
+                  <img src="/assets/icons/phone.svg" alt="" />
+                  <span>+1 0000000000</span>
+                </a>
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contact Carla Beauty on WhatsApp"
+                >
+                  <img src="/assets/icons/whatsapp.svg" alt="" />
+                  <span>+1 0000000000</span>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/carlabeatrizs_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Carla Beauty on Instagram"
+                >
+                  <img src="/assets/icons/instagram.svg" alt="" />
+                  <span>carlabeatrizs_</span>
+                </a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="/index.html" class="footer__logo">
+          <img
+            src="/assets/logos/carla-beauty-combination.svg"
+            alt="Carla Beauty"
+          />
+        </a>
+
+        <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
+
+        <div class="footer__socials">
+          <a href="tel:+10000000000" aria-label="Call Carla Beauty">
+            <img src="/assets/icons/phone.svg" alt="" />
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Carla Beauty on WhatsApp"
+          >
+            <img src="/assets/icons/whatsapp.svg" alt="" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/carlabeatrizs_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Carla Beauty on Instagram"
+          >
+            <img src="/assets/icons/instagram.svg" alt="" />
+          </a>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <ul>
+            <li>
+              <a href="/" class="nav__link">Home</a>
+            </li>
+
+            <li>
+              <a href="/pages/my-work.html" class="nav__link">My Work</a>
+            </li>
+
+            <li>
+              <a href="/pages/services.html" class="nav__link">Services</a>
+            </li>
+
+            <li>
+              <a href="/pages/classes.html" class="nav__link">Classes</a>
+            </li>
+
+            <li>
+              <a href="/pages/beauty-tips.html" class="nav__link">
+                Beauty Tips
+              </a>
+            </li>
+
+            <li><a href="/pages/about.html" class="nav__link">About</a></li>
+
+            <li>
+              <a href="/pages/contact.html" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <p class="footer__copyright">Copyright 2024, Carla Beauty</p>
+      </div>
+    </footer>
+
+    <div class="floating-contact">
+      <div class="floating-contact__links">
+        <a
+          href="https://www.instagram.com/carlabeatrizs_"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="floating-contact__link floating-contact__link--instagram"
+        >
+          <img src="/assets/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a
+          href="tel:+10000000000"
+          class="floating-contact__link floating-contact__link--phone"
+        >
+          <img src="/assets/icons/phone.svg" alt="Call" />
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="floating-contact__link floating-contact__link--whatsapp"
+        >
+          <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" />
+        </a>
+      </div>
+
+      <button class="floating-contact__button" id="contactButton">
+        <img src="/assets/icons/contact.svg" alt="Contact" />
+      </button>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/contact.js"></script>
+  </body>
+</html>

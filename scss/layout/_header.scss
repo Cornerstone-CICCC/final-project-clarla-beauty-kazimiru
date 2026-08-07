@@ -1,6 +1,5 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
-@use 'sass:map';
 
 .header {
   position: fixed;
@@ -94,7 +93,7 @@
         width: 1px;
         height: $font-size-400;
 
-        background: $color-design-primary;
+        background: $color-pink;
 
         transform: translateY(-50%);
       }

@@ -2,11 +2,23 @@
 @use '../abstracts/mixins' as *;
 
 .home {
-  // Navigation
-  nav {
-    font-family: $font-family-baskerville;
-    font-size: $font-size-400;
-    color: $color-text-dark-brown;
+  text-align: center;
+
+  // Common
+  .my-work,
+  .services,
+  .beauty-tips {
+    &__title {
+      @include flex-col;
+
+      &::after {
+        content: '';
+        width: 200px;
+        height: 1px;
+        background-color: $color-pink;
+        margin-top: $spacing-300;
+      }
+    }
   }
 
   // Hero
@@ -30,7 +42,6 @@
     color: white;
 
     &__description {
-      text-align: center;
       margin-top: $spacing-200;
     }
 
@@ -40,22 +51,335 @@
   }
 
   // About
+  .about {
+    padding-inline: $spacing-400;
+    padding-block: $spacing-500;
 
-  // Beauty Tips
-  .beauty-tips {
+    &__content {
+      @include flex-col;
+    }
+
+    &__intro {
+      @include flex-col;
+      gap: $spacing-200;
+    }
+
     &__title {
+      @include flex-col;
+
       text-transform: capitalize;
       letter-spacing: normal;
       font-size: $font-size-500;
+      color: $color-text-primary;
+
+      &::before {
+        display: block;
+        content: '';
+        background-image: url('../../assets/logos/carla-beauty-monogram-black.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 29.54px;
+        height: 24px;
+        margin-bottom: $spacing-200;
+      }
+    }
+
+    &__description {
+      font-weight: $font-weight-light;
+      line-height: $line-height-relaxed;
+    }
+
+    &__signature,
+    .button {
+      margin-top: $spacing-200;
+    }
+
+    &__founder {
+      margin-top: $spacing-300;
+      width: 322.5px;
+      background-color: $color-bg-accent-white;
+    }
+
+    &__brands {
+      margin-top: $spacing-300;
+      width: 100%;
+
+      &-title {
+        width: 100%;
+        font-family: inherit;
+        font-size: $font-size-300;
+        font-weight: $font-weight-light;
+        text-transform: capitalize;
+        color: $color-text-gray;
+
+        display: flex;
+        align-items: center;
+        gap: $spacing-150;
+
+        &::before,
+        &::after {
+          content: '';
+          flex: 1;
+          height: 1.5px;
+          background-color: $color-mid-gray;
+        }
+      }
+
+      &-list {
+        margin-top: $spacing-400;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        column-gap: $spacing-150;
+        row-gap: $spacing-400;
+        opacity: 0.6;
+
+        li {
+          @include flex-center;
+        }
+      }
+    }
+  }
+
+  // My Work
+  .my-work {
+    background-color: $color-bg-accent-light;
+    padding-inline: $spacing-400;
+    padding-block: $spacing-500;
+
+    &__intro {
+      @include flex-col;
+    }
+
+    &__description {
+      margin-top: $spacing-300;
+      font-weight: $font-weight-light;
+      line-height: $line-height-relaxed;
+    }
+
+    .button {
+      margin-top: $spacing-400;
+    }
+
+    &__gallery {
+      margin-top: $spacing-400;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: $spacing-150;
+      row-gap: $spacing-150;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__client-review {
+      margin-top: $spacing-500;
+      @include flex-col;
+      gap: $spacing-300;
+
+      p {
+        font-size: $font-size-400;
+        font-family: $font-family-baskerville;
+      }
+    }
+
+    &__review-navigation {
+      margin-top: $spacing-300;
+      @include flex-center;
+      gap: $spacing-500;
+
+      .button {
+        padding-inline: $spacing-150;
+        padding-block: $spacing-100;
+      }
+    }
+  }
+
+  // Services
+  .services {
+    @include flex-col;
+
+    padding-inline: $spacing-400;
+    padding-block: $spacing-500;
+
+    &__description {
+      margin-top: $spacing-300;
+      font-weight: $font-weight-light;
+      line-height: $line-height-relaxed;
+    }
+
+    .button {
+      margin-top: $spacing-300;
+    }
+
+    &__list {
+      margin-top: $spacing-400;
+      margin-inline: $spacing-200;
+
+      display: grid;
+      grid-template-columns: repeat(1, 1fr) / repeat(3, 1fr);
+      column-gap: $spacing-150;
+      row-gap: $spacing-150;
+    }
+
+    &__item {
+      @include flex-col;
+      gap: $spacing-200;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      position: relative;
+
+      span {
+        position: absolute;
+        bottom: $spacing-100;
+        font-family: $font-family-baskerville;
+        font-size: $font-size-600;
+        color: $color-bg-primary;
+      }
+    }
+
+    &__image-wrapper {
+      width: 100%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.67)
+        );
+      }
     }
   }
 
   // Classes
   .classes {
-    a span {
-      font-family: $font-family-baskerville;
-      font-size: $font-size-400;
-      color: $color-text-red-brown;
+    background-color: $color-bg-accent-light;
+    padding-top: $spacing-500;
+
+    &__inner {
+      @include flex-col;
+      padding-inline: $spacing-400;
+    }
+
+    &__list {
+      margin-inline: $spacing-150;
+      margin-block: $spacing-400;
+
+      @include flex-col;
+      gap: $spacing-400;
+    }
+
+    &__item {
+      &-title {
+        font-size: $font-size-500;
+        @include flex-col;
+
+        &::before {
+          display: block;
+          content: '';
+          background-image: url('../../assets/icons/badge.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 32px;
+          height: 32px;
+          margin-bottom: $spacing-200;
+        }
+      }
+
+      a {
+        margin-top: $spacing-300;
+
+        @include flex-center;
+        gap: $spacing-150;
+
+        span {
+          font-family: $font-family-baskerville;
+          font-size: $font-size-400;
+          color: $color-text-red-brown;
+          text-transform: capitalize;
+        }
+        img {
+          width: 8px;
+          height: 14px;
+        }
+      }
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    &__portrait-wrapper {
+      margin-top: $spacing-400;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 25px;
+        border: 1px solid #fff;
+      }
+    }
+
+    &__portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // Beauty Tips
+  .beauty-tips {
+    @include flex-col;
+
+    padding-inline: $spacing-400;
+    padding-block: $spacing-500;
+
+    width: 100%;
+    overflow: hidden;
+
+    &__title {
+      text-transform: capitalize;
+      letter-spacing: normal;
+      font-size: $font-size-500;
+    }
+
+    &__gallery {
+      margin-top: $spacing-400;
+
+      width: 300%;
+      @include flex-center;
+      gap: $spacing-200;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .button {
+      margin-top: $spacing-400;
     }
   }
 
@@ -64,20 +388,236 @@
     text-transform: capitalize;
   }
 
-  .contact__button {
+  .floating-contact__button {
     background-color: black;
     opacity: 0.8;
   }
 
   // PC style
   @include media-query {
+    .about {
+      margin-inline: auto;
+      max-width: 860px;
+      text-align: start;
+
+      &__content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: $spacing-600;
+      }
+
+      &__intro {
+        grid-column: 2 / 2;
+        grid-row: 1 / span 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+      }
+
+      &__title {
+        align-items: start;
+
+        &::before {
+          background-image: url('../../assets/logos/carla-beauty-monogram-pink.svg');
+          width: 50px;
+          height: 40.63px;
+        }
+      }
+
+      &__founder {
+        grid-column: 1 / 1;
+        grid-row: 1 / span 1;
+        width: 306px;
+      }
+
+      &__brands-list {
+        display: flex;
+        gap: $spacing-500;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 700px;
+        margin-inline: auto;
+      }
+    }
+
+    .my-work {
+      padding-inline: 0;
+      padding-block: $spacing-700;
+
+      &__intro {
+        margin-inline: auto;
+        padding-inline: $spacing-400;
+      }
+
+      &__title {
+        max-width: 900px;
+      }
+
+      &__description {
+        max-width: 400px;
+      }
+
+      &__gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+
+      &__client-review p {
+        max-width: 750px;
+        margin-inline: auto;
+        font-size: $font-size-500;
+      }
+    }
+
+    .services {
+      padding-block: $spacing-700;
+
+      &__title {
+        max-width: 900px;
+      }
+
+      &__description {
+        max-width: 400px;
+      }
+
+      &__list {
+        @include flex-center;
+        gap: $spacing-700;
+        margin-top: $spacing-600;
+      }
+
+      &__item {
+        span {
+          font-size: 65.28px;
+          bottom: $spacing-200;
+          color: $color-text-light-pink;
+          &::first-letter {
+            color: $color-text-dark-pink;
+          }
+        }
+
+        &--wedding {
+          order: 2;
+
+          span {
+            font-size: 84.86px;
+            left: -$spacing-600;
+          }
+
+          .services__image-wrapper::before {
+            border: 1px solid $color-pink;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: '';
+            top: -$spacing-200;
+            left: $spacing-200;
+            z-index: -1;
+          }
+        }
+
+        &--party {
+          order: 1;
+          span {
+            left: -$spacing-450;
+          }
+        }
+
+        &--photoshoot {
+          order: 3;
+          span {
+            left: -$spacing-450;
+          }
+        }
+      }
+    }
+
+    .classes {
+      display: grid;
+      grid-template-columns: 1.5fr, 1fr;
+
+      margin-inline: $spacing-500;
+      padding-block: $spacing-500;
+      padding-inline: $spacing-800;
+
+      column-gap: $spacing-600;
+      row-gap: $spacing-200;
+
+      &__title {
+        grid-column: 1 / span 2;
+      }
+
+      &__inner {
+        padding-inline: 0;
+        align-items: flex-start;
+      }
+
+      &__list {
+        margin-top: $spacing-400;
+        margin-inline: 0;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      &__item {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        column-gap: $spacing-200;
+        row-gap: $spacing-200;
+        text-align: start;
+
+        &-title {
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 1;
+
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+
+          &::before {
+            width: $font-size-500;
+            height: $font-size-500;
+            margin-bottom: 0;
+            margin-right: $spacing-150;
+          }
+        }
+
+        &-description {
+          grid-column: 1 / span 1;
+          grid-row: 2 / span 1;
+          width: 75%;
+        }
+
+        &-link {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 2;
+        }
+      }
+
+      .button {
+        width: auto;
+      }
+
+      &__portrait-wrapper::after {
+        inset: 30px;
+      }
+    }
+
     .beauty-tips {
       &__title {
         font-size: $font-size-600;
       }
+
+      &__gallery {
+        width: 1000px;
+      }
     }
-    .classes {
-      a span {
+    .classes__item-link {
+      span {
         display: none;
       }
     }

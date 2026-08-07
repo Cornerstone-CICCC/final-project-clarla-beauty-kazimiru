@@ -3,42 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <title>BC Beauty - Carla Beauty</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body class="home">
     <header class="header">
       <nav class="header__nav" aria-label="Header navigation">
-        <a href="/" class="header__menu">
-          <img src="assets/icons/menu.svg" alt="Menu" />
-        </a>
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="header-navigation"
+        >
+          <img src="/assets/icons/menu.svg" alt="Menu" />
+        </button>
 
         <div class="header__nav--left">
-          <a href="#" class="header__link is-active">Home</a>
-          <a href="#" class="header__link">My work</a>
-          <a href="#" class="header__link">Services</a>
-          <a href="#" class="header__link">Classes</a>
+          <a href="/" class="header__link nav__link">Home</a>
+          <a href="/pages/my-work.html" class="header__link nav__link">
+            My work
+          </a>
+          <a href="/pages/services.html" class="header__link nav__link">
+            Services
+          </a>
+          <a href="/pages/classes.html" class="header__link nav__link">
+            Classes
+          </a>
         </div>
 
         <a href="/" class="header__logo">
           <img
-            src="assets/logos/carla-beauty-combination.svg"
+            src="/assets/logos/carla-beauty-combination.svg"
             alt="Carla Beauty"
           />
         </a>
 
         <div class="header__nav--right">
-          <a href="#" class="header__link">Beauty Tips</a>
-          <a href="#" class="header__link">About</a>
-          <a href="#" class="header__link">Contact</a>
-          <a href="#" class="header__social">
-            <img src="assets/icons/instagram.svg" alt="" />
+          <a href="/pages/beauty-tips.html" class="header__link nav__link">
+            Beauty Tips
+          </a>
+          <a href="/pages/about.html" class="header__link nav__link">About</a>
+          <a href="/pages/contact.html" class="header__link nav__link">
+            Contact
+          </a>
+          <a
+            href="https://www.instagram.com/carlabeatrizs_"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="header__social"
+          >
+            <img src="/assets/icons/instagram.svg" alt="" />
           </a>
         </div>
       </nav>
@@ -48,8 +63,8 @@
       <section class="hero">
         <h1>
           <img
-            src="assets/logos/carla-beauty-wordmark-white.svg"
-            alt="Carla Beauty Signature Logo"
+            src="/assets/logos/carla-beauty-wordmark-white.svg"
+            alt="Carla Beauty"
           />
         </h1>
         <p class="hero__description">
@@ -60,219 +75,624 @@
       </section>
 
       <section class="about">
-        <h2>Professional Makeup & Hairstyle Artist</h2>
-        <p>
-          10+ years creating stunning looks for weddings and special occasions.
-        </p>
-        <a href="pages/about.html" class="button">About me</a>
-        <img
-          src="assets/logos/carla-beatriz-signature-black.svg"
-          alt="A signature of Carla Beatriz"
-        />
-
-        <div>
-          <img
-            src="assets/images/founder-portrait.png"
-            alt="A portrait of the founder"
-          />
-          <img src="assets/icons/instagram-white.svg" alt="Instagram" />
-          <div>
-            <img src="assets/logos/logo-loreal.svg" alt="L'Oréal logo" />
-            <p>Official Certified Professional</p>
+        <div class="about__content">
+          <div class="about__intro">
+            <h2 class="about__title">Professional Makeup & Hairstyle Artist</h2>
+            <p class="about__description">
+              10+ years creating stunning looks for weddings and
+              special occasions.
+            </p>
+            <img
+              class="about__signature"
+              src="/assets/logos/carla-beatriz-signature-black.svg"
+              alt="A signature of Carla Beatriz"
+            />
+            <a href="/pages/about.html" class="button">About me</a>
+          </div>
+          <div class="about__founder">
+            <a
+              href="https://www.instagram.com/carlabeatrizs_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="about__instagram"
+            >
+              <img
+                src="/assets/images/founder-portrait.png"
+                alt="A portrait of the founder"
+              />
+            </a>
           </div>
         </div>
 
-        <p>Our brands</p>
-        <div>
-          <img src="assets/logos/logo-mac.svg" alt="TODO" />
-          <img src="assets/logos/logo-lancome.svg" alt="TODO" />
-          <img src="assets/logos/logo-inglot.svg" alt="TODO" />
-          <img src="assets/logos/logo-laura-mercier.svg" alt="TODO" />
-          <img src="assets/logos/logo-charlotte-tilbury.svg" alt="TODO" />
-          <img src="assets/logos/logo-tarte.svg" alt="TODO" />
-          <img src="assets/logos/logo-anastasia.svg" alt="TODO" />
-          <img src="assets/logos/logo-kryolan.svg" alt="TODO" />
+        <div class="about__brands">
+          <h3 class="about__brands-title">Our brands</h3>
+          <ul class="about__brands-list">
+            <li><img src="/assets/logos/brand1.png" alt="MAC" /></li>
+            <li><img src="/assets/logos/brand2.png" alt="Lancôme" /></li>
+            <li><img src="/assets/logos/brand3.png" alt="INGLOT" /></li>
+            <li>
+              <img src="/assets/logos/brand4.png" alt="Laura Mercier" />
+            </li>
+            <li>
+              <img src="/assets/logos/brand5.png" alt="Charlotte Tilbury" />
+            </li>
+            <li><img src="/assets/logos/brand6.png" alt="Tarte" /></li>
+            <li>
+              <img
+                src="/assets/logos/brand7.png"
+                alt="Anastasia Beverly Hills"
+              />
+            </li>
+            <li><img src="/assets/logos/brand8.png" alt="Kryolan" /></li>
+          </ul>
         </div>
       </section>
+
       <section class="my-work">
-        <h2 class="my-work__title">You are a star</h2>
-        <p class="my-work__discription">
-          Shine effortlessly, embrace your unique features with absolute
-          confidence.
-        </p>
-        <a href="pages/my-work.html" class="button">My work</a>
-        <img src="assets/images/client-1.png" alt="Photo of a client" />
-        <img src="assets/images/client-2.png" alt="Photo of a client" />
-        <img src="assets/images/client-3.png" alt="Photo of a client" />
-        <img src="assets/images/client-4.png" alt="Photo of a client" />
+        <div class="my-work__intro">
+          <h2 class="my-work__title">You are a star</h2>
+          <p class="my-work__description">
+            Shine effortlessly, embrace your unique features with absolute
+            confidence.
+          </p>
+          <a href="/pages/my-work.html" class="button">My work</a>
+        </div>
 
-        <img src="assets/icons/apostrophe.svg" alt="TODO" />
+        <div class="my-work__gallery">
+          <img src="/assets/images/client-1.png" alt="Photo of a client" />
+          <img src="/assets/images/client-2.png" alt="Photo of a client" />
+          <img src="/assets/images/client-3.png" alt="Photo of a client" />
+          <img src="/assets/images/client-4.png" alt="Photo of a client" />
+        </div>
 
-        <p>
-          Carla is the best! She made me the night's brightest star! She stayed
-          with me the whole wedding ensuring I always looked and felt
-          wonderful!!
-        </p>
+        <blockquote class="my-work__client-review">
+          <img src="/assets/icons/apostrophe.svg" alt="" />
+          <p>
+            Carla is the best! She made me the night's brightest star! She
+            stayed with me the whole wedding ensuring I always looked and felt
+            wonderful!!
+          </p>
+        </blockquote>
 
-        <a href="">
-          <img src="assets/icons/arrow-left.svg" alt="Arrow towards left" />
-        </a>
-        <img src="assets/images/singniture-janny.svg" alt="Janny" />
-        <a href="">
-          <img src="assets/icons/arrow-right.svg" alt="Arrow toward right" />
-        </a>
+        <div class="my-work__review-navigation">
+          <button id="previousReview" aria-label="Previous review">
+            <img src="/assets/icons/arrow-left.svg" alt="" />
+          </button>
+
+          <img src="/assets/images/signature-janny.svg" alt="Janny" />
+
+          <button id="nextReview" aria-label="Next review">
+            <img src="/assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
       </section>
 
-      <section class="styles">
-        <h2 class="styles__title">Makeup & hairstyle</h2>
-        <p class="styles__discription">
+      <section class="services">
+        <h2 class="services__title">Makeup & hairstyle</h2>
+        <p class="services__description">
           We offer fully customizable plan to meet your unique requirements.
         </p>
         <a href="#form" class="button">Get a quote</a>
-        <div>
-          <img src="assets/images/service-wedding.png" alt="TODO" />
-          <img src="assets/images/service-party.png" alt="TODO" />
-          <img src="assets/images/service-photoshoot.png" alt="TODO" />
-        </div>
+        <ul class="services__list">
+          <li class="services__item services__item--wedding">
+            <div class="services__image-wrapper">
+              <img
+                src="/assets/images/service-wedding.png"
+                alt="Wedding makeup"
+              />
+            </div>
+            <span>Wedding</span>
+          </li>
+          <li class="services__item services__item--party">
+            <div class="services__image-wrapper">
+              <img src="/assets/images/class-1.png" alt="Party makeup" />
+            </div>
+            <span>Party</span>
+          </li>
+          <li class="services__item services__item--photoshoot">
+            <div class="services__image-wrapper">
+              <img
+                src="/assets/images/service-photoshoot.png"
+                alt="Photoshoot makeup"
+              />
+            </div>
+            <span>Photoshoot</span>
+          </li>
+        </ul>
       </section>
 
       <section class="classes">
         <h2 class="classes__title">Make up 101</h2>
-        <div class="classes__description">
-          <h3>1-on-1 Master Class</h3>
-          <p>
-            Customize your learning experience to excel in your chosen areas,
-            all at your own pace.
-          </p>
-          <!-- TODO -->
-          <a href="pages/classes.html#1">
-            <span>View class</span>
-            <img src="assets/icons/arrow-right.svg" alt="Arrow towards right" />
-          </a>
-
-          <h3>Professional 1-day Makeup workshop</h3>
-          <p>Discover popular and practical techniques to apply right away!</p>
-          <a href="pages/classes.html#2">
-            <span>View class</span>
-            <img src="assets/icons/arrow-right.svg" alt="Arrow towards right" />
-          </a>
-
-          <h3>Self-Makeup Beginner class</h3>
-          <p>
-            Learn the basics, practice doing your own makeup and make
-            new friends in the process!
-          </p>
-          <a href="pages/classes.html#3">
-            <span>View class</span>
-            <img src="assets/icons/arrow-right.svg" alt="Arrow towards right" />
-          </a>
-
+        <div class="classes__inner">
+          <ul class="classes__list">
+            <li class="classes__item">
+              <h3 class="classes__item-title">1-on-1 Master Class</h3>
+              <p class="classes__item-description">
+                Customize your learning experience to excel in your chosen
+                areas, all at your own pace.
+              </p>
+              <a
+                href="/pages/one-on-one-master-class.html"
+                class="classes__item-link"
+              >
+                <span>View class</span>
+                <img src="/assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="classes__item">
+              <h3 class="classes__item-title">Professional 1-day Workshop</h3>
+              <p class="classes__item-description">
+                Discover popular and practical techniques to apply right away!
+              </p>
+              <a href="pages/makeup-workshop.html" class="classes__item-link">
+                <span>View class</span>
+                <img src="/assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="classes__item">
+              <h3 class="classes__item-title">Self-Makeup Beginner class</h3>
+              <p class="classes__item-description">
+                Learn the basics, practice doing your own makeup and make
+                new friends in the process!
+              </p>
+              <a href="pages/beginner-class.html" class="classes__item-link">
+                <span>View class</span>
+                <img src="/assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+          </ul>
           <a href="pages/classes.html" class="button">All classes</a>
         </div>
-        <img
-          src="assets/images/class-portrait.png"
-          alt="Portrait of the instructor"
-        />
+
+        <div class="classes__portrait-wrapper">
+          <img
+            class="classes__portrait"
+            src="/assets/images/class-portrait.png"
+            alt="Portrait of the instructor"
+          />
+        </div>
       </section>
 
       <section class="beauty-tips">
         <h2 class="beauty-tips__title">DIY beauty corner</h2>
-        <div>
+        <div class="beauty-tips__gallery">
           <img
-            src="assets/images/beauty-tips-1.png"
+            src="/assets/images/beauty-tips-1.png"
             alt="Dummy image of instagram reel thumbnail"
           />
           <img
-            src="assets/images/beauty-tips-2.png"
+            src="/assets/images/beauty-tips-2.png"
             alt="Dummy image of instagram reel thumbnail"
           />
           <img
-            src="assets/images/beauty-tips-3.png"
+            src="/assets/images/beauty-tips-3.png"
             alt="Dummy image of instagram reel thumbnail"
           />
         </div>
         <a href="pages/beauty-tips.html" class="button">More beauty tips</a>
       </section>
 
-      <section class="form">
-        <h2>Let's talk</h2>
-        <p>
+      <section class="contact-page">
+        <h2 class="title">Let's talk</h2>
+        <p class="description">
           Check availability, pricing, and schedule a meeting for your special
           day or our academy services.
         </p>
+        <section class="contact" id="form">
+          <div class="contact__tabs">
+            <button
+              class="contact__tab contact__tab--active"
+              type="button"
+              data-form-type="services"
+            >
+              Services
+            </button>
 
-        <form action=""></form>
-      </section>
-
-      <footer class="footer">
-        <div class="footer__inner">
-          <a href="../index.html" class="footer__logo">
-            <img
-              src="../assets/logos/carla-beauty-combination.svg"
-              alt="Carla Beauty"
-            />
-          </a>
-
-          <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
-
-          <div class="footer__socials">
-            <a href="#" aria-label="Call Carla Beauty">
-              <img src="../assets/icons/phone.svg" alt="" />
-            </a>
-
-            <a href="#" aria-label="Contact Carla Beauty on WhatsApp">
-              <img src="../assets/icons/whatsapp.svg" alt="" />
-            </a>
-
-            <a href="#" aria-label="Visit Carla Beauty on Instagram">
-              <img src="../assets/icons/instagram.svg" alt="" />
-            </a>
+            <button class="contact__tab" type="button" data-form-type="classes">
+              Classes
+            </button>
           </div>
 
-          <nav class="footer__nav" aria-label="Footer navigation">
-            <ul>
-              <li><a href="../index.html" class="is-active">Home</a></li>
+          <form class="contact__form">
+            <!-- Service -->
+            <fieldset
+              class="contact-form__flow contact-form__flow--services"
+              data-form-type="services"
+            >
+              <!-- Services - Step 1 -->
+              <fieldset class="contact-form__step" data-step="1">
+                <fieldset class="contact__group contact__group--event-type">
+                  <legend class="contact__title">Event Type</legend>
 
-              <li><a href="my-work.html">My Work</a></li>
+                  <div class="contact__options">
+                    <label class="contact__option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="event-type"
+                        value="wedding"
+                        checked
+                      />
+                      <span class="contact__option-label">Wedding</span>
+                    </label>
 
-              <li><a href="services.html">Services</a></li>
+                    <label class="contact__option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="event-type"
+                        value="party"
+                      />
+                      <span class="contact__option-label">Party</span>
+                    </label>
 
-              <li>
-                <a href="classes.html" aria-current="page">Classes</a>
-              </li>
+                    <label class="contact__option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="event-type"
+                        value="photoshoot"
+                      />
+                      <span class="contact__option-label">Photoshoot</span>
+                    </label>
+                  </div>
+                </fieldset>
 
-              <li><a href="beauty-tips.html">Beauty Tips</a></li>
+                <div class="contact__row">
+                  <fieldset class="contact__group">
+                    <legend class="contact__title">Event Date</legend>
 
-              <li><a href="about.html">About</a></li>
+                    <div class="contact__input-wrapper">
+                      <input
+                        class="contact__input contact__input--date"
+                        type="date"
+                        name="event-date"
+                        aria-label="Event date"
+                      />
+                    </div>
 
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
+                    <label class="contact__checkbox-label">
+                      <input
+                        class="contact__checkbox"
+                        type="checkbox"
+                        name="event-date-undecided"
+                      />
+                      <span>Not decided</span>
+                    </label>
+                  </fieldset>
 
-          <p class="footer__copyright">Copyright 2024, Carla Beauty</p>
-        </div>
-      </footer>
+                  <fieldset class="contact__group">
+                    <legend class="contact__title">Event Time</legend>
+
+                    <div class="contact__select-wrapper">
+                      <select class="contact__select" name="event-time">
+                        <option value="full-day">Full day</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                      </select>
+                    </div>
+
+                    <label class="contact__checkbox-label">
+                      <input
+                        class="contact__checkbox"
+                        type="checkbox"
+                        name="time-undecided"
+                      />
+                      <span>Not decided</span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <fieldset class="contact__group contact__group--name">
+                  <legend class="contact__title">Name</legend>
+
+                  <input
+                    class="contact__input"
+                    id="name-service"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                  />
+                </fieldset>
+
+                <fieldset class="contact__group contact__group--contact">
+                  <legend class="contact__title">Contact</legend>
+
+                  <div class="contact__contact-options">
+                    <!-- Call -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="call"
+                          checked
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>Call</span>
+                      </label>
+
+                      <div class="contact__method-input contact__phone-wrapper">
+                        <select
+                          class="contact__country-code"
+                          name="call-country-code"
+                          aria-label="Call country code"
+                          disabled
+                        >
+                          <option value="+1">+1</option>
+                          <option value="+81">+81</option>
+                        </select>
+
+                        <input
+                          class="contact__phone-input"
+                          type="tel"
+                          name="call-phone"
+                          placeholder="Your mobile number"
+                          autocomplete="tel"
+                          disabled
+                        />
+                      </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="whatsapp"
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>WhatsApp</span>
+                      </label>
+
+                      <div class="contact__method-input contact__phone-wrapper">
+                        <select
+                          class="contact__country-code"
+                          name="whatsapp-country-code"
+                          aria-label="WhatsApp country code"
+                          disabled
+                        >
+                          <option value="+1">+1</option>
+                          <option value="+81">+81</option>
+                        </select>
+
+                        <input
+                          class="contact__phone-input"
+                          type="tel"
+                          name="whatsapp-phone"
+                          placeholder="Your mobile number"
+                          autocomplete="tel"
+                          disabled
+                        />
+                      </div>
+                    </div>
+
+                    <!-- SMS -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="sms"
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>SMS</span>
+                      </label>
+
+                      <div class="contact__method-input">
+                        <input
+                          class="contact__input"
+                          type="text"
+                          name="sms-account"
+                          placeholder="Your SMS account"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact__method">
+                      <label class="contact__contact-option">
+                        <input
+                          class="contact__radio"
+                          type="radio"
+                          name="contact-method"
+                          value="email"
+                        />
+                        <span class="contact__radio-custom"></span>
+                        <span>Email</span>
+                      </label>
+
+                      <div class="contact__method-input">
+                        <input
+                          class="contact__input"
+                          type="email"
+                          name="email"
+                          placeholder="Your email address"
+                          autocomplete="email"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="contact__group contact__group--contact-time">
+                  <legend class="contact__title contact__title--small">
+                    When do you want us to call?
+                  </legend>
+
+                  <div class="contact__contact-options">
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="I don't mind"
+                        checked
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>I don't mind</span>
+                    </label>
+
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="Morning"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Morning</span>
+                    </label>
+
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="Afternoon"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Afternoon</span>
+                    </label>
+
+                    <label class="contact__contact-option">
+                      <input
+                        class="contact__radio"
+                        type="radio"
+                        name="contact-time"
+                        value="Evening"
+                      />
+                      <span class="contact__radio-custom"></span>
+                      <span>Evening</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <button class="button" type="submit">Next</button>
+              </fieldset>
+            </fieldset>
+          </form>
+        </section>
+      </section>
     </main>
 
-    <div class="contact">
-      <div class="contact__links">
-        <a href="#" class="contact__link contact__link--instagram">
-          <img src="assets/icons/instagram.svg" alt="Instagram" />
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="/index.html" class="footer__logo">
+          <img
+            src="/assets/logos/carla-beauty-combination.svg"
+            alt="Carla Beauty"
+          />
         </a>
-        <a href="#" class="contact__link contact__link--phone">
-          <img src="assets/icons/phone.svg" alt="Call" />
+
+        <p class="footer__description">Expert Makeup and Hairstyle Studio</p>
+
+        <div class="footer__socials">
+          <a href="tel:+10000000000" aria-label="Call Carla Beauty">
+            <img src="/assets/icons/phone.svg" alt="" />
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Carla Beauty on WhatsApp"
+          >
+            <img src="/assets/icons/whatsapp.svg" alt="" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/carlabeatrizs_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Carla Beauty on Instagram"
+          >
+            <img src="/assets/icons/instagram.svg" alt="" />
+          </a>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <ul>
+            <li>
+              <a href="/" class="nav__link">Home</a>
+            </li>
+
+            <li>
+              <a href="/pages/my-work.html" class="nav__link">My Work</a>
+            </li>
+
+            <li>
+              <a href="/pages/services.html" class="nav__link">Services</a>
+            </li>
+
+            <li>
+              <a href="/pages/classes.html" class="nav__link">Classes</a>
+            </li>
+
+            <li>
+              <a href="/pages/beauty-tips.html" class="nav__link">
+                Beauty Tips
+              </a>
+            </li>
+
+            <li><a href="/pages/about.html" class="nav__link">About</a></li>
+
+            <li>
+              <a href="/pages/contact.html" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <p class="footer__copyright">Copyright 2024, Carla Beauty</p>
+      </div>
+    </footer>
+
+    <div class="floating-contact">
+      <div class="floating-contact__links">
+        <a
+          href="https://www.instagram.com/carlabeatrizs_"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="floating-contact__link floating-contact__link--instagram"
+        >
+          <img src="/assets/icons/instagram.svg" alt="Instagram" />
         </a>
-        <a href="#" class="contact__link contact__link--whatsapp">
-          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="floating-contact__link floating-contact__link--phone"
+        >
+          <img src="/assets/icons/phone.svg" alt="Call" />
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="floating-contact__link floating-contact__link--whatsapp"
+        >
+          <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" />
         </a>
       </div>
 
-      <button class="contact__button" id="contactButton">
-        <img src="assets/icons/contact.svg" alt="Contact" />
+      <button class="floating-contact__button" id="contactButton">
+        <img src="/assets/icons/contact.svg" alt="Contact" />
       </button>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/common.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/home.js"></script>
   </body>
 </html>
