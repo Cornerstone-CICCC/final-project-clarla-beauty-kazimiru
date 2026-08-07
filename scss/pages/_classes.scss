@@ -1,6 +1,10 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+/* ==================================================
+   INDIVIDUAL CLASS DETAIL PAGES
+   ================================================== */
+
 .class-page {
   color: $color-text-primary;
   background-color: $color-bg-primary;
@@ -135,8 +139,10 @@
   &__image {
     order: 2;
 
+    display: block;
     width: 100%;
     min-height: 390px;
+
     object-fit: cover;
     object-position: center top;
   }
@@ -182,7 +188,297 @@
   }
 }
 
+/* ==================================================
+   CLASSES LIST PAGE
+   MOBILE FIRST
+   ================================================== */
+
+.classes-list-page {
+  color: $color-text-primary;
+  background-color: $color-bg-primary;
+
+  h2,
+  h3 {
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  &__intro {
+    padding: 4rem 1.5rem 2.75rem;
+
+    text-align: center;
+    background-color: $color-bg-primary;
+  }
+
+  &__title {
+    width: fit-content;
+    margin: 0 auto;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: block;
+
+      width: 200px;
+      max-width: 60%;
+      height: 1px;
+      margin: 1.5rem auto 0;
+
+      background-color: $color-text-dark-pink;
+    }
+  }
+
+  &__description {
+    width: fit-content;
+    max-width: calc(100vw - 2rem);
+    margin: 1.5rem auto 0;
+
+    color: $color-text-primary;
+    font-family: 'Avenir', $font-family-inter, sans-serif;
+    font-size: $font-size-200;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  &__description-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  &__description-mobile {
+    display: block;
+  }
+
+  &__description-desktop {
+    display: none;
+  }
+}
+
+.classes-list {
+  background-color: $color-bg-accent-light;
+
+  &__inner {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &__content {
+    padding: 2rem 1rem 4rem;
+    background-color: $color-bg-accent-light;
+  }
+
+  &__item-title {
+    margin: 0 0 2rem;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0;
+  }
+
+  &__item-title--master {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__title-on {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  &__title-mobile {
+    display: inline;
+  }
+
+  &__title-desktop {
+    display: none;
+  }
+
+  &__text-mobile {
+    display: block;
+  }
+
+  &__text-desktop {
+    display: none;
+  }
+
+  &__information {
+    display: grid;
+    gap: 1.25rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__information-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: $color-text-primary;
+    font-size: $font-size-200;
+    line-height: 1.4;
+
+    img {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+  }
+
+  &__audience {
+    margin-top: 2.75rem;
+
+    h3 {
+      margin: 0 0 0.75rem;
+
+      color: $color-text-primary;
+      font-family: $font-family-baskerville;
+      font-size: 1.625rem;
+      line-height: 1.2;
+      font-weight: $font-weight-regular;
+    }
+
+    p {
+      margin: 0;
+
+      color: $color-text-primary;
+      font-size: $font-size-200;
+      line-height: 1.65;
+    }
+  }
+
+  &__curriculum {
+    margin-top: 2.75rem;
+
+    h3 {
+      margin: 0 0 0.75rem;
+
+      color: $color-text-primary;
+      font-family: $font-family-baskerville;
+      font-size: 1.625rem;
+      line-height: 1.2;
+      font-weight: $font-weight-regular;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+
+      padding-left: 1rem;
+
+      color: $color-text-primary;
+      font-size: $font-size-200;
+      line-height: 1.6;
+
+      &::before {
+        content: '-';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+
+    width: 100%;
+    margin-top: 2.75rem;
+    padding: 0.9rem 1rem;
+
+    border: 1px solid $color-text-dark-pink;
+
+    background-color: transparent;
+    color: $color-text-red-brown;
+
+    font-family: $font-family-baskerville;
+    font-size: $font-size-300;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: none;
+  }
+
+  &__notes {
+    display: grid;
+    gap: 1.25rem;
+
+    padding: 0 1.25rem 4rem;
+
+    background-color: $color-bg-accent-light;
+  }
+
+  &__note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    max-width: 280px;
+    margin: 0;
+
+    color: $color-text-red-brown;
+    font-size: $font-size-200;
+    line-height: 1.6;
+
+    img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      object-fit: contain;
+    }
+  }
+}
+
+/* ==================================================
+   DESKTOP
+   ================================================== */
+
 @media screen and (min-width: $breakpoints-lg) {
+  /* Individual class detail pages */
+
   .class-page {
     &__intro {
       padding: $spacing-200 $spacing-400 $spacing-300;
@@ -265,7 +561,9 @@
 
     &__title {
       display: block;
+
       margin-bottom: $spacing-300;
+
       font-size: $font-size-450;
     }
 
@@ -284,7 +582,1142 @@
 
     &__button {
       margin-top: $spacing-400;
+
       font-size: $font-size-200;
+    }
+  }
+
+  /* Classes listing page */
+
+  .classes-list-page {
+    &__intro {
+      padding: 3.5rem 2rem 2.75rem;
+
+      text-align: center;
+      background-color: $color-bg-primary;
+    }
+
+    &__title {
+      width: fit-content;
+      margin: 0 auto;
+
+      color: $color-text-red-brown;
+      font-family: $font-family-baskerville;
+      font-size: 80px;
+      font-weight: $font-weight-regular;
+      line-height: 1.3;
+      letter-spacing: 0.13em;
+      text-align: center;
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        display: block;
+
+        width: 180px;
+        height: 1px;
+        margin: 1rem auto 0;
+
+        background-color: $color-text-dark-pink;
+      }
+    }
+
+    &__description {
+      width: 437px;
+      max-width: 100%;
+      margin: 1.5rem auto 0;
+
+      color: $color-text-primary;
+      font-family: 'Avenir', $font-family-inter, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    &__description-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    &__description-mobile {
+      display: none;
+    }
+
+    &__description-desktop {
+      display: block;
+    }
+  }
+
+  .classes-list {
+    &__inner {
+      width: 100%;
+      max-width: 1080px;
+      margin-inline: auto;
+      padding: 3rem 0 7.5rem;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: start;
+
+      & + & {
+        margin-top: 8rem;
+      }
+    }
+
+    &__image-wrapper {
+      width: 330px;
+      overflow: hidden;
+    }
+
+    &__image {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    &__content {
+      min-width: 0;
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    &__item-title {
+      margin: 0 0 1.5rem;
+
+      color: $color-text-red-brown;
+      font-family: $font-family-baskerville;
+      font-size: 52px;
+      font-weight: $font-weight-regular;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    &__item-title--master {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      white-space: nowrap;
+    }
+
+    &__title-on {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    &__title-mobile {
+      display: none;
+    }
+
+    &__title-desktop {
+      display: inline;
+    }
+
+    &__text-mobile {
+      display: none;
+    }
+
+    &__text-desktop {
+      display: block;
+      white-space: nowrap;
+    }
+
+    &__information {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+
+      margin: 0 0 1.75rem;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    &__information-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      color: $color-text-primary;
+      font-family: $font-family-inter;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+
+      img {
+        width: 19px;
+        height: 19px;
+        flex-shrink: 0;
+
+        object-fit: contain;
+      }
+    }
+
+    &__audience {
+      margin: 0 0 1.75rem;
+
+      h3 {
+        margin: 0 0 0.5rem;
+
+        color: $color-text-primary;
+        font-family: $font-family-baskerville;
+        font-size: 26px;
+        font-weight: $font-weight-regular;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+
+        color: $color-text-primary;
+        font-family: $font-family-inter;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.55;
+        letter-spacing: 0;
+      }
+    }
+
+    &__curriculum {
+      margin: 0;
+
+      h3 {
+        margin: 0 0 0.5rem;
+
+        color: $color-text-primary;
+        font-family: $font-family-baskerville;
+        font-size: 26px;
+        font-weight: $font-weight-regular;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.25rem;
+
+        list-style: disc;
+      }
+
+      li {
+        position: static;
+
+        padding-left: 0;
+
+        color: $color-text-primary;
+        font-family: $font-family-inter;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.45;
+        letter-spacing: 0;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 160px;
+      min-height: 60px;
+      margin-top: 1.75rem;
+      padding: 0.75rem 1rem;
+
+      border: 1px solid $color-text-dark-pink;
+
+      background-color: transparent;
+      color: $color-text-red-brown;
+
+      font-family: $font-family-baskerville;
+      font-size: 18px;
+      font-weight: $font-weight-regular;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: none;
+    }
+
+    &__notes {
+      display: none;
+    }
+  }
+}
+
+/* Professional Workshop title — desktop only */
+
+@media screen and (min-width: $breakpoints-lg) {
+  #class-2 {
+    .classes-list__item-title {
+      font-size: 40px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .classes-list__title-mobile {
+      display: none;
+    }
+
+    .classes-list__title-desktop {
+      display: block;
+
+      font-size: 40px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+  }
+}
+
+
+/* ==================================================
+   1-ON-1 MASTER CLASS PAGE
+   MOBILE
+   ================================================== */
+
+.class-page--one-on-one {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: normal;
+  }
+
+  .class-page__intro {
+    padding: $spacing-200 $spacing-300 $spacing-400;
+  }
+
+  .class-page__title {
+    margin-top: 3rem;
+
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .class-card__body {
+    padding: $spacing-300 $spacing-300 $spacing-500;
+  }
+
+  .class-card__information {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .class-card__information-item {
+    font-size: $font-size-200;
+  }
+
+  .class-card__button {
+    margin-top: 3rem;
+  }
+
+  .class-card__image {
+    min-height: 0;
+    aspect-ratio: 0.77;
+
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .class-detail__content {
+    padding: 2.5rem $spacing-300 4rem;
+  }
+
+  .class-detail__section {
+    & + & {
+      margin-top: 3.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: $font-size-200;
+      line-height: 1.7;
+    }
+  }
+
+  .class-detail__topic {
+    & + & {
+      margin-top: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: $spacing-300;
+
+      list-style: disc;
+    }
+
+    li {
+      padding-left: 2px;
+
+      font-size: $font-size-200;
+      line-height: 1.65;
+    }
+  }
+
+  .class-detail__copy-mobile,
+  .class-detail__heading-mobile {
+    display: block;
+  }
+
+  .class-detail__copy-desktop,
+  .class-detail__heading-desktop {
+    display: none;
+  }
+
+  .class-detail__line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .class-detail__mobile-button {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+/* ==================================================
+   1-ON-1 MASTER CLASS PAGE
+   DESKTOP
+   ================================================== */
+
+@media screen and (min-width: $breakpoints-lg) {
+  .class-page--one-on-one {
+    .class-page__intro {
+      padding: $spacing-200 $spacing-400 $spacing-300;
+    }
+
+    .class-page__title {
+      margin-top: $spacing-200;
+
+      text-align: center;
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+
+    .class-detail__inner {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: $spacing-600;
+
+      width: 100%;
+      max-width: 1020px;
+      margin-inline: auto;
+      padding: $spacing-600 0 $spacing-700;
+    }
+
+    .class-detail__content {
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    .class-detail__section {
+      & + & {
+        margin-top: $spacing-500;
+      }
+
+      h2 {
+        margin-bottom: $spacing-300;
+
+        font-size: $font-size-500;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: $font-size-200;
+        line-height: 1.55;
+      }
+    }
+
+    .class-detail__topic {
+      & + & {
+        margin-top: $spacing-400;
+      }
+
+      h3 {
+        margin-bottom: $spacing-100;
+
+        font-size: $font-size-400;
+        line-height: 1.25;
+      }
+
+      li {
+        font-size: $font-size-200;
+        line-height: 1.5;
+      }
+    }
+
+    .class-detail__copy-mobile,
+    .class-detail__heading-mobile {
+      display: none;
+    }
+
+    .class-detail__copy-desktop,
+    .class-detail__heading-desktop {
+      display: block;
+    }
+
+    .class-card {
+      align-self: start;
+
+      border: 1px solid $color-text-dark-pink;
+    }
+
+    .class-card__image {
+      order: 1;
+
+      min-height: 0;
+      aspect-ratio: 0.78;
+    }
+
+    .class-card__body {
+      order: 2;
+
+      padding: $spacing-300;
+      background-color: transparent;
+    }
+
+    .class-card__title {
+      display: block;
+
+      margin-bottom: $spacing-300;
+
+      font-size: $font-size-450;
+    }
+
+    .class-card__information {
+      gap: $spacing-150;
+    }
+
+    .class-card__information-item {
+      font-size: $font-size-100;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .class-card__button {
+      margin-top: $spacing-400;
+
+      font-size: $font-size-200;
+    }
+
+    .class-detail__mobile-button {
+      display: none;
+    }
+  }
+}
+
+
+/* ==================================================
+   PROFESSIONAL MAKEUP WORKSHOP PAGE
+   MOBILE
+   ================================================== */
+
+.class-page--workshop {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: normal;
+  }
+
+  .workshop-title-line,
+  .workshop-line {
+    display: block;
+  }
+
+  .workshop-title-line,
+  .workshop-copy-mobile .workshop-line,
+  .workshop-heading-mobile .workshop-line {
+    white-space: nowrap;
+  }
+
+  .workshop-copy-mobile,
+  .workshop-heading-mobile {
+    display: block;
+  }
+
+  .workshop-copy-desktop,
+  .workshop-heading-desktop {
+    display: none;
+  }
+
+  .class-page__intro {
+    padding: $spacing-200 $spacing-300 $spacing-400;
+  }
+
+  .class-page__title {
+    margin-top: 2.5rem;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: 2rem;
+    font-weight: $font-weight-regular;
+    line-height: 1.2;
+  }
+
+  .class-card__body {
+    padding: 1.75rem $spacing-300 2.25rem;
+  }
+
+  .class-card__information {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .class-card__information-item {
+    font-size: $font-size-200;
+  }
+
+  .class-card__button {
+    margin-top: 2.5rem;
+  }
+
+  .class-card__image {
+    min-height: 0;
+    aspect-ratio: 0.77;
+
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .class-detail__content {
+    padding: 2.25rem 1rem 4rem;
+  }
+
+  .class-detail__section {
+    & + & {
+      margin-top: 3rem;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+
+      font-family: $font-family-inter;
+      font-size: $font-size-100;
+      font-weight: 300;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+  }
+
+  .class-detail__topic {
+    & + & {
+      margin-top: 2.75rem;
+    }
+
+    h3 {
+      margin-bottom: 0.75rem;
+
+      font-family: $font-family-baskerville;
+      font-size: 1.5rem;
+      font-weight: $font-weight-regular;
+      line-height: 1.25;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.25rem;
+
+      list-style: disc;
+    }
+
+    li {
+      padding-left: 0;
+
+      font-family: $font-family-inter;
+      font-size: $font-size-100;
+      font-weight: 300;
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+  }
+
+  .class-detail__mobile-button {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+/* ==================================================
+   PROFESSIONAL MAKEUP WORKSHOP PAGE
+   DESKTOP
+   ================================================== */
+
+@media screen and (min-width: $breakpoints-lg) {
+  .class-page--workshop {
+    .workshop-copy-mobile,
+    .workshop-heading-mobile {
+      display: none;
+    }
+
+    .workshop-copy-desktop,
+    .workshop-heading-desktop {
+      display: block;
+    }
+
+    .workshop-copy-desktop .workshop-line {
+      white-space: nowrap;
+    }
+
+    .class-page__intro {
+      padding: $spacing-200 $spacing-400 $spacing-300;
+    }
+
+    .class-page__title {
+      margin-top: 2rem;
+
+      text-align: center;
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+
+    .class-detail__inner {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 3rem;
+
+      width: 100%;
+      max-width: 940px;
+      margin-inline: auto;
+      padding: 3rem 0 5rem;
+    }
+
+    .class-detail__content {
+      min-width: 0;
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    .class-detail__section {
+      & + & {
+        margin-top: 2.75rem;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: $font-size-100;
+        line-height: 1.55;
+      }
+    }
+
+    .class-detail__topic {
+      & + & {
+        margin-top: 2.25rem;
+      }
+
+      h3 {
+        margin-bottom: 0.5rem;
+
+        font-size: 1.5rem;
+        line-height: 1.25;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.25rem;
+
+        list-style: disc;
+      }
+
+      li {
+        font-size: $font-size-100;
+        line-height: 1.5;
+      }
+    }
+
+    .class-card {
+      align-self: start;
+
+      border: 1px solid $color-text-dark-pink;
+    }
+
+    .class-card__image {
+      order: 1;
+
+      min-height: 0;
+      aspect-ratio: 0.75;
+
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .class-card__body {
+      order: 2;
+
+      padding: $spacing-300;
+      background-color: transparent;
+    }
+
+    .class-card__title {
+      display: block;
+      margin-bottom: $spacing-300;
+
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .class-card__information {
+      gap: $spacing-150;
+    }
+
+    .class-card__information-item {
+      font-size: $font-size-100;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .class-card__button {
+      margin-top: $spacing-400;
+
+      font-size: $font-size-200;
+    }
+
+    .class-detail__mobile-button {
+      display: none;
+    }
+  }
+}
+
+
+
+/* ==================================================
+   SELF-MAKEUP BEGINNER CLASS PAGE
+   MOBILE
+   ================================================== */
+
+.class-page--beginner {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: normal;
+  }
+
+  .beginner-title-line,
+  .beginner-line {
+    display: block;
+  }
+
+  .beginner-title-line,
+  .beginner-copy-mobile .beginner-line,
+  .beginner-heading-mobile .beginner-line {
+    white-space: nowrap;
+  }
+
+  .beginner-copy-mobile,
+  .beginner-heading-mobile {
+    display: block;
+  }
+
+  .beginner-copy-desktop,
+  .beginner-heading-desktop {
+    display: none;
+  }
+
+  .class-page__intro {
+    padding: $spacing-200 $spacing-300 $spacing-400;
+  }
+
+  .class-page__title {
+    margin-top: 2.5rem;
+
+    color: $color-text-red-brown;
+    font-family: $font-family-baskerville;
+    font-size: 2rem;
+    font-weight: $font-weight-regular;
+    line-height: 1.2;
+  }
+
+  .class-card__body {
+    padding: 1.75rem $spacing-300 2.25rem;
+  }
+
+  .class-card__information {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .class-card__information-item {
+    font-size: $font-size-200;
+  }
+
+  .class-card__button {
+    margin-top: 2.5rem;
+  }
+
+  .class-card__image {
+    min-height: 0;
+    aspect-ratio: 0.78;
+
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .class-detail__content {
+    padding: 2.25rem 1rem 4rem;
+  }
+
+  .class-detail__section {
+    & + & {
+      margin-top: 3rem;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+
+      font-family: $font-family-inter;
+      font-size: $font-size-100;
+      font-weight: 300;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+  }
+
+  .class-detail__topic {
+    & + & {
+      margin-top: 2.75rem;
+    }
+
+    h3 {
+      margin-bottom: 0.75rem;
+
+      font-family: $font-family-baskerville;
+      font-size: 1.5rem;
+      font-weight: $font-weight-regular;
+      line-height: 1.25;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.25rem;
+
+      list-style: disc;
+    }
+
+    li {
+      padding-left: 0;
+
+      font-family: $font-family-inter;
+      font-size: $font-size-100;
+      font-weight: 300;
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+  }
+
+  .class-detail__mobile-button {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+/* ==================================================
+   SELF-MAKEUP BEGINNER CLASS PAGE
+   DESKTOP
+   ================================================== */
+
+@media screen and (min-width: $breakpoints-lg) {
+  .class-page--beginner {
+    .beginner-copy-mobile,
+    .beginner-heading-mobile {
+      display: none;
+    }
+
+    .beginner-copy-desktop,
+    .beginner-heading-desktop {
+      display: block;
+    }
+
+    .beginner-copy-desktop .beginner-line {
+      white-space: nowrap;
+    }
+
+    .class-page__intro {
+      padding: $spacing-200 $spacing-400 $spacing-300;
+    }
+
+    .class-page__title {
+      margin-top: 2rem;
+
+      text-align: center;
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+
+    .class-detail__inner {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 3rem;
+
+      width: 100%;
+      max-width: 940px;
+      margin-inline: auto;
+      padding: 3rem 0 5rem;
+    }
+
+    .class-detail__content {
+      min-width: 0;
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    .class-detail__section {
+      & + & {
+        margin-top: 2.75rem;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: $font-size-100;
+        line-height: 1.55;
+      }
+    }
+
+    .class-detail__topic {
+      & + & {
+        margin-top: 2.25rem;
+      }
+
+      h3 {
+        margin-bottom: 0.5rem;
+
+        font-size: 1.5rem;
+        line-height: 1.25;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.25rem;
+
+        list-style: disc;
+      }
+
+      li {
+        font-size: $font-size-100;
+        line-height: 1.5;
+      }
+    }
+
+    .class-card {
+      align-self: start;
+
+      border: 1px solid $color-text-dark-pink;
+    }
+
+    .class-card__image {
+      order: 1;
+
+      min-height: 0;
+      aspect-ratio: 0.75;
+
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .class-card__body {
+      order: 2;
+
+      padding: $spacing-300;
+      background-color: transparent;
+    }
+
+    .class-card__title {
+      display: block;
+      margin-bottom: $spacing-300;
+
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .class-card__information {
+      gap: $spacing-150;
+    }
+
+    .class-card__information-item {
+      font-size: $font-size-100;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .class-card__button {
+      margin-top: $spacing-400;
+
+      font-size: $font-size-200;
+    }
+
+    .class-detail__mobile-button {
+      display: none;
     }
   }
 }
